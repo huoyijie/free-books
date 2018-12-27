@@ -1,0 +1,365 @@
+!!com.iggy_huo.freebooks.book.BookList
+books:
+- {category: IDE, langDep: false, name: IntelliJ IDEA 简体中文专题教程, url: 'https://github.com/judasn/IntelliJ-IDEA-Tutorial'}
+- {category: MySQL, langDep: false, name: 21分钟MySQL入门教程, url: 'http://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html'}
+- {category: MySQL, langDep: false, name: MySQL索引背后的数据结构及算法原理, url: 'http://blog.codinglabs.org/articles/theory-of-mysql-index.html'}
+- {category: NoSQL, langDep: false, name: Disque 使用教程, url: 'http://disque.huangz.me'}
+- {category: NoSQL, langDep: false, name: Redis 命令参考, url: 'http://redisdoc.com'}
+- {category: NoSQL, langDep: false, name: Redis 设计与实现, url: 'http://redisbook.com'}
+- {category: NoSQL, langDep: false, name: The Little MongoDB Book, url: 'https://github.com/justinyhuang/the-little-mongodb-book-cn/blob/master/mongodb.md'}
+- {category: NoSQL, langDep: false, name: The Little Redis Book, url: 'https://github.com/JasonLai256/the-little-redis-book/blob/master/cn/redis.md'}
+- {category: NoSQL, langDep: false, name: 带有详细注释的 Redis 2.6 代码, url: 'https://github.com/huangz1990/annotated_redis_source'}
+- {category: NoSQL, langDep: false, name: 带有详细注释的 Redis 3.0 代码, url: 'https://github.com/huangz1990/redis-3.0-annotated'}
+- {category: PostgreSQL, langDep: false, name: PostgreSQL 8.2.3 中文文档, url: 'http://works.jinbuguo.com/postgresql/menu823/index.html'}
+- {category: PostgreSQL, langDep: false, name: PostgreSQL 9.3.1 中文文档, url: 'http://www.postgres.cn/docs/9.3/index.html'}
+- {category: PostgreSQL, langDep: false, name: PostgreSQL 9.4.4 中文文档, url: 'http://www.postgres.cn/docs/9.4/index.html'}
+- {category: PostgreSQL, langDep: false, name: PostgreSQL 9.5.3 中文文档, url: 'http://www.postgres.cn/docs/9.5/index.html'}
+- {category: PostgreSQL, langDep: false, name: PostgreSQL 9.6.0 中文文档, url: 'http://www.postgres.cn/docs/9.6/index.html'}
+- {category: Web, langDep: false, name: 3 Web Designs in 3 Weeks, url: 'https://www.gitbook.com/book/juntao/3-web-designs-in-3-weeks/details'}
+- {category: Web, langDep: false, name: Chrome 开发者工具中文手册, url: 'https://github.com/CN-Chrome-DevTools/CN-Chrome-DevTools'}
+- {category: Web, langDep: false, name: Chrome扩展开发文档, url: 'http://open.chrome.360.cn/extension_dev/overview.html'}
+- {category: Web, langDep: false, name: 'Growth: 全栈增长工程师指南', url: 'https://github.com/phodal/growth-ebook'}
+- {category: Web, langDep: false, name: Grunt中文文档, url: 'http://www.gruntjs.net'}
+- {category: Web, langDep: false, name: Gulp 入门指南, url: 'https://github.com/nimojs/gulp-book'}
+- {category: Web, langDep: false, name: gulp中文文档, url: 'http://www.gulpjs.com.cn/docs/'}
+- {category: Web, langDep: false, name: HTTP 接口设计指北, url: 'https://github.com/bolasblack/http-api-guide'}
+- {category: Web, langDep: false, name: HTTP/2.0 中文翻译, url: 'http://yuedu.baidu.com/ebook/478d1a62376baf1ffc4fad99?pn=1'}
+- {category: Web, langDep: false, name: http2讲解, url: 'https://www.gitbook.com/book/ye11ow/http2-explained/details'}
+- {category: Web, langDep: false, name: JSON风格指南, url: 'https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md'}
+- {category: Web, langDep: false, name: Wireshark用户手册, url: 'http://man.lupaworld.com/content/network/wireshark/index.html'}
+- {category: Web, langDep: false, name: 一站式学习Wireshark, url: 'https://community.emc.com/thread/194901'}
+- {category: Web, langDep: false, name: 关于浏览器和网络的 20 项须知, url: 'http://www.20thingsilearned.com/zh-CN/home'}
+- {category: Web, langDep: false, name: 前端代码规范 及 最佳实践, url: 'http://coderlmn.github.io/code-standards/'}
+- {category: Web, langDep: false, name: 前端开发体系建设日记, url: 'https://github.com/fouber/blog/issues/2'}
+- {category: Web, langDep: false, name: 前端资源分享（一）, url: 'https://github.com/hacke2/hacke2.github.io/issues/1'}
+- {category: Web, langDep: false, name: 前端资源分享（二）, url: 'https://github.com/hacke2/hacke2.github.io/issues/3'}
+- {category: Web, langDep: false, name: 正则表达式30分钟入门教程, url: 'http://deerchao.net/tutorials/regex/regex.htm'}
+- {category: Web, langDep: false, name: 浏览器开发工具的秘密, url: 'http://jinlong.github.io/2013/08/29/devtoolsecrets/'}
+- {category: Web, langDep: false, name: 移动Web前端知识库, url: 'https://github.com/AlloyTeam/Mars'}
+- {category: Web, langDep: false, name: 移动前端开发收藏夹, url: 'https://github.com/hoosin/mobile-web-favorites'}
+- {category: WEB服务器, langDep: false, name: Apache 中文手册, url: 'http://works.jinbuguo.com/apache/menu22/index.html'}
+- {category: WEB服务器, langDep: false, name: Nginx开发从入门到精通, url: 'http://tengine.taobao.org/book/index.html'}
+- {category: WEB服务器, langDep: false, name: Nginx教程从入门到精通, url: 'http://www.ttlsa.com/nginx/nginx-stu-pdf/'}
+- {category: 其它, langDep: false, name: OpenWrt智能、自动、透明翻墙路由器教程, url: 'https://softwaredownload.gitbooks.io/openwrt-fanqiang/content/'}
+- {category: 其它, langDep: false, name: SAN 管理入门系列, url: 'https://community.emc.com/docs/DOC-16067'}
+- {category: 其它, langDep: false, name: Sketch 中文手册, url: 'http://sketchcn.com/sketch-chinese-user-manual.html#introduce'}
+- {category: 其它, langDep: false, name: 深入理解并行编程, url: 'http://ifeve.com/perfbook/'}
+- {category: 函数式概念, langDep: false, name: 傻瓜函数编程, url: 'https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn'}
+- {category: 分布式系统, langDep: false, name: 走向分布式, url: 'http://dcaoyuan.github.io/papers/pdfs/Scalability.pdf'}
+- {category: 在线教育, langDep: false, name: 51CTO学院, url: 'http://edu.51cto.com'}
+- {category: 在线教育, langDep: false, name: Codecademy, url: 'https://www.codecademy.com/?locale_code=zh'}
+- {category: 在线教育, langDep: false, name: CodeSchool, url: 'https://www.codeschool.com'}
+- {category: 在线教育, langDep: false, name: Coursera, url: 'https://www.coursera.org/courses?orderby=upcoming&lngs=zh'}
+- {category: 在线教育, langDep: false, name: Learn X in Y minutes, url: 'https://learnxinyminutes.com'}
+- {category: 在线教育, langDep: false, name: shiyanlou, url: 'https://www.shiyanlou.com'}
+- {category: 在线教育, langDep: false, name: TeamTreeHouse, url: 'https://teamtreehouse.com'}
+- {category: 在线教育, langDep: false, name: Udacity, url: 'https://www.udacity.com'}
+- {category: 在线教育, langDep: false, name: xuetangX, url: 'https://www.xuetangx.com'}
+- {category: 在线教育, langDep: false, name: 慕课网, url: 'http://www.imooc.com/course/list'}
+- {category: 在线教育, langDep: false, name: 极客学院, url: 'http://www.jikexueyuan.com'}
+- {category: 在线教育, langDep: false, name: 汇智网, url: 'http://www.hubwiz.com'}
+- {category: 在线教育, langDep: false, name: 计蒜客, url: 'http://www.jisuanke.com'}
+- {category: 大数据, langDep: false, name: Spark 编程指南简体中文版, url: 'https://aiyanbo.gitbooks.io/spark-programming-guide-zh-cn/content/'}
+- {category: 大数据, langDep: false, name: 大型集群上的快速和通用数据处理架构, url: 'https://code.csdn.net/CODE_Translation/spark_matei_phd'}
+- {category: 大数据, langDep: false, name: 数据挖掘中经典的算法实现和详细的注释, url: 'https://github.com/linyiqun/DataMiningAlgorithm'}
+- {category: 大数据, langDep: false, name: 面向程序员的数据挖掘指南, url: 'http://dataminingguide.books.yourtion.com'}
+- {category: 操作系统, langDep: false, name: 'Debian 参考手册 ', url: 'http://man.chinaunix.net/linux/debian/reference/reference.zh-cn.html'}
+- {category: 操作系统, langDep: false, name: Docker —— 从入门到实践, url: 'https://github.com/yeasy/docker_practice'}
+- {category: 操作系统, langDep: false, name: Docker中文指南, url: 'https://github.com/widuu/chinese_docker'}
+- {category: 操作系统, langDep: false, name: Docker入门实战, url: 'http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1'}
+- {category: 操作系统, langDep: false, name: FreeBSD 使用手册, url: 'http://www.freebsd.org/doc/zh_CN.UTF-8/books/handbook/'}
+- {category: 操作系统, langDep: false, name: Linux Documentation (中文版), url: 'https://tinylab.gitbooks.io/linux-doc/content/zh-cn/'}
+- {category: 操作系统, langDep: false, name: Linux Guide for Complete Beginners, url: 'http://happypeter.github.io/LGCB/book/'}
+- {category: 操作系统, langDep: false, name: Linux 构建指南, url: 'http://works.jinbuguo.com/lfs/lfs62/index.html'}
+- {category: 操作系统, langDep: false, name: Linux 系统高级编程, url: 'http://sourceforge.net/projects/elpi/'}
+- {category: 操作系统, langDep: false, name: Linux工具快速教程, url: 'https://github.com/me115/linuxtools_rst'}
+- {category: 操作系统, langDep: false, name: Mac 开发配置手册, url: 'https://aaaaaashu.gitbooks.io/mac-dev-setup/content/'}
+- {category: 操作系统, langDep: false, name: 'Operating Systems: Three Easy Pieces', url: 'http://pages.cs.wisc.edu/~remzi/OSTEP/'}
+- {category: 操作系统, langDep: false, name: The Linux Command Line, url: 'http://billie66.github.io/TLCL/index.html'}
+- {category: 操作系统, langDep: false, name: 'Ubuntu 参考手册 ', url: 'http://wiki.ubuntu.org.cn/UbuntuManual'}
+- {category: 操作系统, langDep: false, name: 'uCore Lab: Operating System Course in Tsinghua
+    University', url: 'https://www.gitbook.com/book/objectkuan/ucore-docs/details'}
+- {category: 操作系统, langDep: false, name: UNIX TOOLBOX, url: 'http://cb.vu/unixtoolbox_zh_CN.xhtml'}
+- {category: 操作系统, langDep: false, name: 命令行的艺术, url: 'https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md'}
+- {category: 操作系统, langDep: false, name: 嵌入式 Linux 知识库 (eLinux.org 中文版), url: 'https://tinylab.gitbooks.io/elinux/content/zh/'}
+- {category: 操作系统, langDep: false, name: 开源世界旅行手册, url: 'http://i.linuxtoy.org/docs/guide/index.html'}
+- {category: 操作系统, langDep: false, name: 理解Linux进程, url: 'https://github.com/tobegit3hub/understand_linux_process'}
+- {category: 操作系统, langDep: false, name: 鸟哥的 Linux 私房菜 基础学习篇, url: 'http://cn.linux.vbird.org/linux_basic/linux_basic.php'}
+- {category: 操作系统, langDep: false, name: 鸟哥的 Linux 私房菜 服务器架设篇, url: 'http://cn.linux.vbird.org/linux_server/'}
+- {category: 数据库, langDep: false, name: Redis 设计与实现, url: 'http://redisbook.com'}
+- {category: 数据库, langDep: false, name: The Little MongoDB Book 中文版, url: 'https://github.com/justinyhuang/the-little-mongodb-book-cn'}
+- {category: 智能系统, langDep: false, name: 一步步搭建物联网系统, url: 'https://github.com/phodal/designiot'}
+- {category: 正则表达式, langDep: false, name: 正则表达式-菜鸟教程, url: 'http://www.runoob.com/regexp/regexp-tutorial.html'}
+- {category: 正则表达式, langDep: false, name: 正则表达式30分钟入门教程, url: 'https://web.archive.org/web/20161119141236/http://deerchao.net:80/tutorials/regex/regex.htm'}
+- {category: 版本控制, langDep: false, name: Git - 简易指南, url: 'http://rogerdudler.github.io/git-guide/index.zh.html'}
+- {category: 版本控制, langDep: false, name: Git-Cheat-Sheet, url: 'https://github.com/flyhigher139/Git-Cheat-Sheet'}
+- {category: 版本控制, langDep: false, name: Git Community Book 中文版, url: 'http://gitbook.liuhui998.com'}
+- {category: 版本控制, langDep: false, name: git-flow 备忘清单, url: 'http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html'}
+- {category: 版本控制, langDep: false, name: Git magic, url: 'http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/'}
+- {category: 版本控制, langDep: false, name: Git Magic, url: 'http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/'}
+- {category: 版本控制, langDep: false, name: Git 参考手册, url: 'http://gitref.justjavac.com'}
+- {category: 版本控制, langDep: false, name: Github帮助文档, url: 'https://github.com/waylau/github-help'}
+- {category: 版本控制, langDep: false, name: GitHub秘籍, url: 'https://snowdream86.gitbooks.io/github-cheat-sheet/content/zh/'}
+- {category: 版本控制, langDep: false, name: Git教程, url: 'http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000'}
+- {category: 版本控制, langDep: false, name: Got GitHub, url: 'https://github.com/gotgit/gotgithub'}
+- {category: 版本控制, langDep: false, name: GotGitHub, url: 'http://www.worldhello.net/gotgithub/index.html'}
+- {category: 版本控制, langDep: false, name: HgInit (中文版), url: 'https://zh-hginit.readthedocs.io/en/latest/'}
+- {category: 版本控制, langDep: false, name: Mercurial 使用教程, url: 'https://www.mercurial-scm.org/wiki/ChineseTutorial'}
+- {category: 版本控制, langDep: false, name: Pro Git, url: 'https://git-scm.com/book/zh/v2'}
+- {category: 版本控制, langDep: false, name: Pro Git 中文版, url: 'https://www.gitbook.com/book/0532/progit/details'}
+- {category: 版本控制, langDep: false, name: svn 手册, url: 'http://svnbook.red-bean.com/nightly/zh/index.html'}
+- {category: 版本控制, langDep: false, name: 学习 Git 分支, url: 'http://pcottle.github.io/learnGitBranching/'}
+- {category: 版本控制, langDep: false, name: 沉浸式学 Git, url: 'http://igit.linuxtoy.org/index.html'}
+- {category: 版本控制, langDep: false, name: 猴子都能懂的GIT入门, url: 'http://backlogtool.com/git-guide/cn/'}
+- {category: 程序员杂谈, langDep: false, name: 程序员的自我修养, url: 'http://www.kancloud.cn/kancloud/a-programmer-prepares'}
+- {category: 管理和监控, langDep: false, name: ElasticSearch 权威指南, url: 'https://www.gitbook.com/book/fuxiaopang/learnelasticsearch/details'}
+- {category: 管理和监控, langDep: false, name: Elasticsearch 权威指南（中文版）, url: 'http://es.xiaoleilu.com'}
+- {category: 管理和监控, langDep: false, name: ELKstack 中文指南, url: 'http://kibana.logstash.es'}
+- {category: 管理和监控, langDep: false, name: Logstash 最佳实践, url: 'https://github.com/chenryn/logstash-best-practice-cn'}
+- {category: 管理和监控, langDep: false, name: Mastering Elasticsearch(中文版), url: 'http://udn.yyuap.com/doc/mastering-elasticsearch/'}
+- {category: 管理和监控, langDep: false, name: Puppet 2.7 Cookbook 中文版, url: 'https://www.gitbook.com/book/wizardforcel/puppet-27-cookbook/details'}
+- {category: 编程艺术, langDep: false, name: 取悦的工序：如何理解游戏, url: 'http://read.douban.com/ebook/4972883/'}
+- {category: 编程艺术, langDep: false, name: 每个程序员都应该了解的内存知识(译), url: 'http://www.oschina.net/translate/what-every-programmer-should-know-about-memory-part1?print'}
+- {category: 编程艺术, langDep: false, name: 程序员编程艺术, url: 'https://github.com/julycoding/The-Art-Of-Programming-by-July'}
+- {category: 编程艺术, langDep: false, name: 编程入门指南, url: 'http://www.kancloud.cn/kancloud/intro-to-prog/52592'}
+- {category: 编译原理, langDep: false, name: 《计算机程序的结构和解释》公开课 翻译项目, url: 'https://github.com/DeathKing/Learning-SICP'}
+- {category: 编辑器, langDep: false, name: exvim--vim 改良成IDE项目, url: 'http://exvim.github.io/docs-zh/intro/'}
+- {category: 编辑器, langDep: false, name: Vim中文文档, url: 'https://github.com/vimcn/vimcdoc'}
+- {category: 编辑器, langDep: false, name: 所需即所获：像 IDE 一样使用 vim, url: 'https://github.com/yangyangwithgnu/use_vim_as_ide'}
+- {category: 编辑器, langDep: false, name: 笨方法学Vimscript 中译本, url: 'http://learnvimscriptthehardway.onefloweroneworld.com'}
+- {category: 计算机图形学, langDep: false, name: LearnOpenGL CN, url: 'https://learnopengl-cn.github.io'}
+- {category: 计算机图形学, langDep: false, name: OpenGL 教程, url: 'https://github.com/zilongshanren/opengl-tutorials'}
+- {category: 设计模式, langDep: false, name: 史上最全设计模式导学目录, url: 'http://blog.csdn.net/lovelion/article/details/17517213'}
+- {category: 设计模式, langDep: false, name: 图说设计模式, url: 'https://github.com/me115/design_patterns'}
+- {category: 软件开发方法, langDep: false, name: 傻瓜函数编程, url: 'https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn'}
+- {category: 软件开发方法, langDep: false, name: 硝烟中的 Scrum 和 XP, url: 'http://www.infoq.com/cn/minibooks/scrum-xp-from-the-trenches'}
+- {category: 项目相关, langDep: false, name: GNU make 指南, url: 'http://docs.huihoo.com/gnu/linux/gmake.html'}
+- {category: 项目相关, langDep: false, name: Gradle 2 用户指南, url: 'https://github.com/waylau/Gradle-2-User-Guide'}
+- {category: 项目相关, langDep: false, name: Gradle 中文使用文档, url: 'http://yuedu.baidu.com/ebook/f23af265998fcc22bcd10da2'}
+- {category: 项目相关, langDep: false, name: Joel谈软件, url: 'https://web.archive.org/web/20170616013024/http://local.joelonsoftware.com/wiki/Chinese_(Simplified'}
+- {category: 项目相关, langDep: false, name: selenium 中文文档, url: 'https://github.com/fool2fish/selenium-doc'}
+- {category: 项目相关, langDep: false, name: 开源软件架构, url: 'http://www.ituring.com.cn/book/1143'}
+- {category: 项目相关, langDep: false, name: 持续集成（第二版）, url: 'http://article.yeeyan.org/view/2251/94882'}
+- {category: 项目相关, langDep: false, name: 約耳談軟體(Joel on Software), url: 'https://web.archive.org/web/20170615232349/http://local.joelonsoftware.com/wiki/首頁'}
+- {category: 项目相关, langDep: false, name: 编码规范, url: 'https://github.com/ecomfe/spec'}
+- {category: 项目相关, langDep: false, name: 让开发自动化系列专栏, url: 'http://www.ibm.com/developerworks/cn/java/j-ap/'}
+- {category: 项目相关, langDep: false, name: 追求代码质量, url: 'http://www.ibm.com/developerworks/cn/java/j-cq/'}
+- {category: Android, langDep: true, name: Android Design(中文版), url: 'http://www.apkbus.com/design/index.html'}
+- {category: Android, langDep: true, name: Android Note(开发过程中积累的知识点), url: 'https://github.com/CharonChui/AndroidNote'}
+- {category: Android, langDep: true, name: Android6.0新特性详解, url: 'http://leanote.com/blog/post/561658f938f41126b2000298'}
+- {category: Android, langDep: true, name: Android学习之路, url: 'http://stormzhang.github.io/android/2014/07/07/learn-android-from-rookie/'}
+- {category: Android, langDep: true, name: Android开发技术前线(android-tech-frontier), url: 'https://github.com/bboyfeiyu/android-tech-frontier'}
+- {category: Android, langDep: true, name: Google Android官方培训课程中文版, url: 'http://hukai.me/android-training-course-in-chinese/index.html'}
+- {category: Android, langDep: true, name: Material Design 中文版, url: 'http://wiki.jikexueyuan.com/project/material-design/'}
+- {category: Android, langDep: true, name: Point-of-Android, url: 'https://github.com/FX-Max/Point-of-Android'}
+- {category: AWK, langDep: true, name: awk中文指南, url: 'http://awk.readthedocs.org/en/latest/index.html'}
+- {category: AWK, langDep: true, name: awk程序设计语言, url: 'https://github.com/wuzhouhui/awk'}
+- {category: C, langDep: true, name: C 语言常见问题集, url: 'http://c-faq-chn.sourceforge.net/ccfaq/ccfaq.html'}
+- {category: C, langDep: true, name: C/C++ 学习教程, url: 'http://doc.lellansin.com'}
+- {category: C, langDep: true, name: Linux C 编程一站式学习, url: 'http://docs.linuxtone.org/ebooks/C&CPP/c/'}
+- {category: C, langDep: true, name: 新概念 C 语言教程, url: 'https://github.com/limingth/NCCL'}
+- {category: C, langDep: true, name: '精通C#(第6版) ', url: 'http://book.douban.com/subject/24827879/'}
+- {category: C++, langDep: true, name: 100个gcc小技巧, url: 'https://github.com/hellogcc/100-gcc-tips/blob/master/src/index.md'}
+- {category: C++, langDep: true, name: 100个gdb小技巧, url: 'https://github.com/hellogcc/100-gdb-tips/blob/master/src/index.md'}
+- {category: C++, langDep: true, name: C 语言编程透视, url: 'https://tinylab.gitbooks.io/cbook/content/'}
+- {category: C++, langDep: true, name: C/C++ Primer, url: 'https://github.com/andycai/cprimer'}
+- {category: C++, langDep: true, name: C++ FAQ LITE(中文版), url: 'http://www.sunistudio.com/cppfaq/'}
+- {category: C++, langDep: true, name: C++ Primer 5th Answers, url: 'https://github.com/Mooophy/Cpp-Primer'}
+- {category: C++, langDep: true, name: C++ Template 进阶指南, url: 'https://github.com/wuye9036/CppTemplateTutorial'}
+- {category: C++, langDep: true, name: C++ 基础教程, url: 'http://www.prglab.com/cms/'}
+- {category: C++, langDep: true, name: C++ 并发编程(基于C++11), url: 'https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/'}
+- {category: C++, langDep: true, name: C++ 并发编程指南, url: 'https://github.com/forhappy/Cplusplus-Concurrency-In-Practice'}
+- {category: C++, langDep: true, name: CGDB中文手册, url: 'https://github.com/leeyiw/cgdb-manual-in-chinese'}
+- {category: C++, langDep: true, name: Cmake 实践, url: 'https://web.archive.org/web/20170615174144/http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf'}
+- {category: C++, langDep: true, name: GNU make 指南, url: 'http://docs.huihoo.com/gnu/linux/gmake.html'}
+- {category: C++, langDep: true, name: Google C++ 风格指南, url: 'http://zh-google-styleguide.readthedocs.org/en/latest/google-cpp-styleguide/contents/'}
+- {category: C++, langDep: true, name: QT 教程, url: 'http://www.kuqin.com/qtdocument/tutorial.html'}
+- {category: C++, langDep: true, name: ZMQ 指南, url: 'https://github.com/anjuke/zguide-cn'}
+- {category: C++, langDep: true, name: 像计算机科学家一样思考（C++版), url: 'http://www.ituring.com.cn/book/1203'}
+- {category: C++, langDep: true, name: 简单易懂的C魔法, url: 'http://www.nowamagic.net/librarys/books/contents/c'}
+- {category: C++, langDep: true, name: 跟我一起写Makefile(PDF), url: 'http://scc.qibebt.cas.cn/docs/linux/base/%B8%FA%CE%D2%D2%BB%C6%F0%D0%B4Makefile-%B3%C2%F0%A9.pdf'}
+- {category: CoffeeScript, langDep: true, name: CoffeeScript 中文, url: 'http://coffee-script.org'}
+- {category: CoffeeScript, langDep: true, name: CoffeeScript 编程风格指南, url: 'https://github.com/elrrrrrrr/coffeescript-style-guide/blob/master/README-ZH.md'}
+- {category: Dart, langDep: true, name: Dart 语言导览, url: 'http://dart.lidian.info/wiki/Language_Tour'}
+- {category: Elasticsearch, langDep: true, name: Elasticsearch 权威指南, url: 'https://github.com/looly/elasticsearch-definitive-guide-cn'}
+- {category: Elasticsearch, langDep: true, name: ELKstack 中文指南, url: 'http://kibana.logstash.es'}
+- {category: Elasticsearch, langDep: true, name: Mastering Elasticsearch(中文版), url: 'http://udn.yyuap.com/doc/mastering-elasticsearch/'}
+- {category: Elixir, langDep: true, name: Elixir Getting Started 中文翻译, url: 'https://github.com/Ljzn/ElixrGettingStartedChinese'}
+- {category: Elixir, langDep: true, name: Elixir 编程语言教程, url: 'https://elixirschool.com/cn/'}
+- {category: Elixir, langDep: true, name: Elixir元编程与DSL 中文翻译, url: 'https://github.com/Ljzn/MetaProgrammingInElixirChinese'}
+- {category: Elixir, langDep: true, name: Phoenix 框架中文文档, url: 'https://mydearxym.gitbooks.io/phoenix-doc-in-chinese/content/'}
+- {category: Erlang, langDep: true, name: Erlang 并发编程, url: 'https://github.com/liancheng/cpie-cn'}
+- {category: Fortran, langDep: true, name: Fortran77和90/95编程入门, url: 'http://micro.ustc.edu.cn/Fortran/ZJDing/'}
+- {category: Golang, langDep: true, name: Go Web 编程, url: 'https://github.com/astaxie/build-web-application-with-golang'}
+- {category: Golang, langDep: true, name: Go 入门指南, url: 'https://github.com/Unknwon/the-way-to-go_ZH_CN'}
+- {category: Golang, langDep: true, name: Go 官方文档翻译, url: 'https://github.com/golang-china/golangdoc.translations'}
+- {category: Golang, langDep: true, name: Go 指南, url: 'https://tour.go-zh.org/list'}
+- {category: Golang, langDep: true, name: Go 简易教程, url: 'https://github.com/songleo/the-little-go-book_ZH_CN'}
+- {category: Golang, langDep: true, name: Go 编程基础, url: 'https://github.com/Unknwon/go-fundamental-programming'}
+- {category: Golang, langDep: true, name: Go 语言实战笔记, url: 'https://github.com/rujews/go-in-action-notes'}
+- {category: Golang, langDep: true, name: Go 语言标准库, url: 'https://github.com/polaris1119/The-Golang-Standard-Library-by-Example'}
+- {category: Golang, langDep: true, name: Go 语言高级编程（Advanced Go Programming）, url: 'https://github.com/chai2010/advanced-go-programming-book'}
+- {category: Golang, langDep: true, name: Go命令教程, url: 'https://github.com/hyper-carrot/go_command_tutorial'}
+- {category: Golang, langDep: true, name: Go实战开发, url: 'https://github.com/astaxie/Go-in-Action'}
+- {category: Golang, langDep: true, name: Go语言博客实践, url: 'https://github.com/achun/Go-Blog-In-Action'}
+- {category: Golang, langDep: true, name: Java程序员的Golang入门指南, url: 'http://blog.csdn.net/dc_726/article/details/46565241'}
+- {category: Golang, langDep: true, name: Network programming with Go 中文翻译版本, url: 'https://github.com/astaxie/NPWG_zh'}
+- {category: Golang, langDep: true, name: Revel 框架手册, url: 'http://gorevel.cn/docs/manual/index.html'}
+- {category: Golang, langDep: true, name: 学习Go语言, url: 'http://mikespook.com/learning-go/'}
+- {category: Golang, langDep: true, name: 神奇的 Go 语言, url: 'http://go.ctolib.com/docs/read/magical-go-c-index.html'}
+- {category: Groovy, langDep: true, name: 实战 Groovy 系列, url: 'http://www.ibm.com/developerworks/cn/java/j-pg/'}
+- {category: Haskell, langDep: true, name: Haskell 趣学指南, url: 'http://learnyoua.haskell.sg'}
+- {category: Haskell, langDep: true, name: Real World Haskell 中文版, url: 'http://cnhaskell.com'}
+- {category: HTML, langDep: true, name: CSS3 Tutorial 《CSS3 教程》, url: 'https://github.com/waylau/css3-tutorial'}
+- {category: HTML, langDep: true, name: CSS参考手册, url: 'http://css.doyoe.com'}
+- {category: HTML, langDep: true, name: Emmet 文档, url: 'http://yanxyz.github.io/emmet-docs/'}
+- {category: HTML, langDep: true, name: HTML5 教程, url: 'http://www.w3school.com.cn/html5/'}
+- {category: HTML, langDep: true, name: HTML和CSS编码规范, url: 'http://codeguide.bootcss.com'}
+- {category: HTML, langDep: true, name: Sass Guidelines 中文, url: 'http://sass-guidelin.es/zh/'}
+- {category: HTML, langDep: true, name: 前端代码规范, url: 'http://alloyteam.github.io/CodeGuide/'}
+- {category: HTML, langDep: true, name: 学习CSS布局, url: 'http://zh.learnlayout.com'}
+- {category: HTML, langDep: true, name: 通用 CSS 笔记、建议与指导, url: 'https://github.com/chadluo/CSS-Guidelines/blob/master/README.md'}
+- {category: iOS, langDep: true, name: Apple Watch开发初探, url: 'http://nilsun.github.io/apple-watch/'}
+- {category: iOS, langDep: true, name: Google Objective-C Style Guide 中文版, url: 'http://zh-google-styleguide.readthedocs.org/en/latest/google-objc-styleguide/'}
+- {category: iOS, langDep: true, name: iOS7人机界面指南, url: 'http://isux.tencent.com/ios-human-interface-guidelines-ui-design-basics-ios7.html'}
+- {category: iOS, langDep: true, name: iOS开发60分钟入门, url: 'https://github.com/qinjx/30min_guides/blob/master/ios.md'}
+- {category: iOS, langDep: true, name: iPhone 6 屏幕揭秘, url: 'http://wileam.com/iphone-6-screen-cn/'}
+- {category: iOS, langDep: true, name: 网易斯坦福大学公开课：iOS 7应用开发字幕文件, url: 'https://github.com/jkyin/Subtitle'}
+- {category: Java, langDep: true, name: Activiti 5.x 用户指南, url: 'https://github.com/waylau/activiti-5.x-user-guide'}
+- {category: Java, langDep: true, name: Apache MINA 2 用户指南, url: 'https://github.com/waylau/apache-mina-2.x-user-guide'}
+- {category: Java, langDep: true, name: Apache Shiro 用户指南, url: 'https://github.com/waylau/apache-shiro-1.2.x-reference'}
+- {category: Java, langDep: true, name: Google Java编程风格指南, url: 'http://www.hawstein.com/posts/google-java-style.html'}
+- {category: Java, langDep: true, name: H2 Database 教程, url: 'https://github.com/waylau/h2-database-doc'}
+- {category: Java, langDep: true, name: Java Servlet 3.1 规范, url: 'https://github.com/waylau/servlet-3.1-specification'}
+- {category: Java, langDep: true, name: Java 编码规范, url: 'https://github.com/waylau/java-code-conventions'}
+- {category: Java, langDep: true, name: Jersey 2.x 用户指南, url: 'https://github.com/waylau/Jersey-2.x-User-Guide'}
+- {category: Java, langDep: true, name: JSSE 参考指南, url: 'https://github.com/waylau/jsse-reference-guide'}
+- {category: Java, langDep: true, name: MyBatis中文文档, url: 'http://mybatis.github.io/mybatis-3/zh/index.html'}
+- {category: Java, langDep: true, name: Netty 4.x 用户指南, url: 'https://github.com/waylau/netty-4-user-guide'}
+- {category: Java, langDep: true, name: Netty 实战(精髓), url: 'https://github.com/waylau/essential-netty-in-action'}
+- {category: Java, langDep: true, name: REST 实战, url: 'https://github.com/waylau/rest-in-action'}
+- {category: Java, langDep: true, name: Spring Boot参考指南, url: 'https://github.com/qibaoguang/Spring-Boot-Reference-Guide'}
+- {category: Java, langDep: true, name: Spring Framework 4.x参考文档, url: 'https://github.com/waylau/spring-framework-4-reference'}
+- {category: Java, langDep: true, name: 用jersey构建REST服务, url: 'https://github.com/waylau/RestDemo'}
+- {category: Javascript, langDep: true, name: Airbnb JavaScript 规范, url: 'https://github.com/adamlu/javascript-style-guide'}
+- {category: Javascript, langDep: true, name: AngularJS入门教程, url: 'https://github.com/zensh/AngularjsTutorial_cn'}
+- {category: Javascript, langDep: true, name: AngularJS最佳实践和风格指南, url: 'https://github.com/mgechev/angularjs-style-guide/blob/master/README-zh-cn.md'}
+- {category: Javascript, langDep: true, name: 在Windows环境下用Yeoman构建AngularJS项目, url: 'http://www.waylau.com/build-angularjs-app-with-yeoman-in-windows/'}
+- {category: Javascript, langDep: true, name: 构建自己的AngularJS, url: 'https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md'}
+- {category: Javascript, langDep: true, name: backbone.js中文文档, url: 'http://www.css88.com/doc/backbone/'}
+- {category: Javascript, langDep: true, name: backbone.js入门教程, url: 'http://www.the5fire.com/backbone-js-tutorials-pdf-download.html'}
+- {category: Javascript, langDep: true, name: Backbone.js入门教程第二版, url: 'https://github.com/the5fire/backbonejs-learning-note'}
+- {category: Javascript, langDep: true, name: Chrome扩展及应用开发, url: 'http://www.ituring.com.cn/minibook/950'}
+- {category: Javascript, langDep: true, name: CoffeeScript 编码风格指南, url: 'https://github.com/geekplux/coffeescript-style-guide'}
+- {category: Javascript, langDep: true, name: Learning D3.JS, url: 'http://d3.decembercafe.org'}
+- {category: Javascript, langDep: true, name: 官方API文档, url: 'https://github.com/mbostock/d3/wiki/API--%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C'}
+- {category: Javascript, langDep: true, name: 张天旭的D3教程, url: 'http://blog.csdn.net/zhang__tianxu/article/category/1623437'}
+- {category: Javascript, langDep: true, name: 楚狂人的D3教程, url: 'http://www.cnblogs.com/winleisure/tag/D3.js/'}
+- {category: Javascript, langDep: true, name: ECMAScript 6 入门, url: 'http://es6.ruanyifeng.com'}
+- {category: Javascript, langDep: true, name: Ext4.1.0 中文文档, url: 'http://extjs-doc-cn.github.io/ext4api/'}
+- {category: Javascript, langDep: true, name: Google JavaScript 代码风格指南, url: 'http://bq69.com/blog/articles/script/868/google-javascript-style-guide.html'}
+- {category: Javascript, langDep: true, name: Google JSON 风格指南, url: 'https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md'}
+- {category: Javascript, langDep: true, name: impress.js的中文教程, url: 'https://github.com/kokdemo/impress.js-tutorial-in-Chinese'}
+- {category: Javascript, langDep: true, name: JavaScript Promise迷你书, url: 'http://liubin.github.io/promises-book/'}
+- {category: Javascript, langDep: true, name: Javascript 原理, url: 'https://web.archive.org/web/20170112164945/http://typeof.net/s/jsmech/'}
+- {category: Javascript, langDep: true, name: JavaScript 标准参考教程（alpha）, url: 'http://javascript.ruanyifeng.com'}
+- {category: Javascript, langDep: true, name: 《JavaScript 模式》, url: 'https://github.com/jayli/javascript-patterns'}
+- {category: Javascript, langDep: true, name: javascript 的 12 个怪癖, url: 'https://github.com/justjavac/12-javascript-quirks'}
+- {category: Javascript, langDep: true, name: JavaScript 秘密花园, url: 'http://bonsaiden.github.io/JavaScript-Garden/zh/'}
+- {category: Javascript, langDep: true, name: JavaScript核心概念及实践, url: 'http://icodeit.org/jsccp/'}
+- {category: Javascript, langDep: true, name: Javascript编程指南, url: 'http://pij.robinqu.me'}
+- {category: Javascript, langDep: true, name: How to write jQuery plugin, url: 'http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html'}
+- {category: Javascript, langDep: true, name: 简单易懂的JQuery魔法, url: 'http://www.nowamagic.net/librarys/books/contents/jquery'}
+- {category: Javascript, langDep: true, name: express.js 中文文档, url: 'http://expressjs.jser.us'}
+- {category: Javascript, langDep: true, name: Express框架, url: 'http://javascript.ruanyifeng.com/nodejs/express.html'}
+- {category: Javascript, langDep: true, name: koa 中文文档, url: 'https://github.com/guo-yu/koa-guide'}
+- {category: Javascript, langDep: true, name: Learn You The Node.js For Much Win!
+    (中文版), url: 'https://www.npmjs.com/package/learnyounode-zh-cn'}
+- {category: Javascript, langDep: true, name: Node debug 三法三例, url: 'http://i5ting.github.io/node-debug-tutorial/'}
+- {category: Javascript, langDep: true, name: Node.js Fullstack《從零到一的進撃》, url: 'https://github.com/jollen/nodejs-fullstack-lessons'}
+- {category: Javascript, langDep: true, name: Node.js 包教不包会, url: 'https://github.com/alsotang/node-lessons'}
+- {category: Javascript, langDep: true, name: Nodejs Wiki Book, url: 'https://github.com/nodejs-tw/nodejs-wiki-book'}
+- {category: Javascript, langDep: true, name: nodejs中文文档, url: 'https://www.gitbook.com/book/0532/nodejs/details'}
+- {category: Javascript, langDep: true, name: Node入门, url: 'http://www.nodebeginner.org/index-zh-cn.html'}
+- {category: Javascript, langDep: true, name: 七天学会NodeJS, url: 'http://nqdeng.github.io/7-days-nodejs/'}
+- {category: Javascript, langDep: true, name: 使用 Express + MongoDB 搭建多人博客, url: 'https://github.com/nswbmw/N-blog'}
+- {category: Javascript, langDep: true, name: JavaScript全栈工程师培训材料, url: 'http://nodejs.ctolib.com/docs/sfile/jstraining/engineering.html'}
+- {category: Javascript, langDep: true, name: Learn React & Webpack by building the
+    Hacker News front page, url: 'https://github.com/theJian/build-a-hn-front-page'}
+- {category: Javascript, langDep: true, name: React-Bits 中文文档, url: 'https://github.com/hateonion/react-bits-CN'}
+- {category: Javascript, langDep: true, name: React Native 中文文档(含最新Android内容), url: 'http://wiki.jikexueyuan.com/project/react-native/'}
+- {category: Javascript, langDep: true, name: React webpack-cookbook, url: 'https://github.com/fakefish/react-webpack-cookbook'}
+- {category: Javascript, langDep: true, name: React.js 中文文档, url: 'https://discountry.github.io/react/'}
+- {category: Javascript, langDep: true, name: React.js 入门教程, url: 'http://fraserxu.me/intro-to-react/'}
+- {category: Javascript, langDep: true, name: Vue.js中文文档, url: 'https://cn.vuejs.org/v2/guide/'}
+- {category: Javascript, langDep: true, name: Zepto.js 中文文档, url: 'http://css88.com/doc/zeptojs_api'}
+- {category: Javascript, langDep: true, name: 你不知道的Javascript, url: 'https://github.com/getify/You-Dont-Know-JS/tree/1ed-zh-CN'}
+- {category: Javascript, langDep: true, name: 命名函数表达式探秘, url: 'http://justjavac.com/named-function-expressions-demystified.html'}
+- {category: Javascript, langDep: true, name: 学用 JavaScript 设计模式, url: 'http://www.oschina.net/translate/learning-javascript-design-patterns'}
+- {category: Javascript, langDep: true, name: 深入理解JavaScript系列, url: 'http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html'}
+- {category: LaTeX, langDep: true, name: LaTeX 笔记, url: 'http://www.dralpha.com/zh/tech/tech.htm'}
+- {category: LaTeX, langDep: true, name: 一份不太简短的 LaTeX2ε 介绍, url: 'http://ctan.org/pkg/lshort-zh-cn'}
+- {category: LaTeX, langDep: true, name: 大家來學 LaTeX, url: 'https://github.com/49951331/graduate-project-102pj/blob/master/docs/latex123.pdf'}
+- {category: LISP, langDep: true, name: ANSI Common Lisp 中文翻译版, url: 'http://acl.readthedocs.org/en/latest/'}
+- {category: LISP, langDep: true, name: Common Lisp 高级编程技术, url: 'http://www.ituring.com.cn/minibook/862'}
+- {category: Lua, langDep: true, name: Lua 5.3 参考手册, url: 'http://www.w3cschool.cc/manual/lua53doc/contents.html'}
+- {category: Markdown, langDep: true, name: Markdown 快速入门, url: 'http://wowubuntu.com/markdown/basic.html'}
+- {category: Markdown, langDep: true, name: Markdown 简明教程, url: 'http://www.jianshu.com/p/7bd23251da0a'}
+- {category: Markdown, langDep: true, name: Markdown 语法说明, url: 'http://wowubuntu.com/markdown/'}
+- {category: Markdown, langDep: true, name: 献给写作者的 Markdown 新手指南, url: 'http://www.jianshu.com/p/q81RER'}
+- {category: Node.js, langDep: true, name: Node 入门, url: 'http://www.nodebeginner.org/index-zh-cn.html'}
+- {category: Node.js, langDep: true, name: The NodeJS 中文文档, url: 'https://www.gitbook.com/book/0532/nodejs/details'}
+- {category: Node.js, langDep: true, name: 七天学会NodeJS, url: 'http://nqdeng.github.io/7-days-nodejs/'}
+- {category: Perl, langDep: true, name: Master Perl Today, url: 'https://github.com/fayland/chinese-perl-book'}
+- {category: Perl, langDep: true, name: Perl 5 教程, url: 'https://web.archive.org/web/20150326073235/http://net.pku.edu.cn/~yhf/tutorial/perl/perl.html'}
+- {category: Perl, langDep: true, name: Perl 教程, url: 'http://www.yiibai.com/perl'}
+- {category: PHP, langDep: true, name: Composer中文文档, url: 'http://docs.phpcomposer.com'}
+- {category: PHP, langDep: true, name: Laravel5.4中文文档, url: 'http://d.laravel-china.org/docs/5.4'}
+- {category: PHP, langDep: true, name: Phalcon7中文文档, url: 'http://www.myleftstudio.com'}
+- {category: PHP, langDep: true, name: PHP 之道, url: 'http://wulijun.github.io/php-the-right-way/'}
+- {category: PHP, langDep: true, name: PHP中文手册, url: 'http://php.net/manual/zh/'}
+- {category: PHP, langDep: true, name: PHP标准规范中文版, url: 'https://psr.phphub.org'}
+- {category: PHP, langDep: true, name: Symfony2 实例教程, url: 'https://wusuopu.gitbooks.io/symfony2_tutorial/content'}
+- {category: PHP, langDep: true, name: Yii2中文文档, url: 'http://www.yiichina.com/doc/guide/2.0'}
+- {category: PHP, langDep: true, name: 深入理解 PHP 内核, url: 'http://www.php-internals.com/book/'}
+- {category: Python, langDep: true, name: Django 1.11.6 中文文档, url: 'https://www.yiyibooks.cn/xx/Django_1.11.6/index.html'}
+- {category: Python, langDep: true, name: Django book 2.0, url: 'http://djangobook.py3k.cn/2.0/'}
+- {category: Python, langDep: true, name: Python 3 文档(简体中文) 3.2.2 documentation, url: 'http://docspy3zh.readthedocs.org/en/latest/'}
+- {category: Python, langDep: true, name: Python Cookbook第三版, url: 'http://python3-cookbook.readthedocs.io/zh_CN/latest/'}
+- {category: Python, langDep: true, name: Python 中文学习大本营, url: 'http://www.pythondoc.com'}
+- {category: Python, langDep: true, name: Python之旅, url: 'http://funhacks.net/explore-python'}
+- {category: Python, langDep: true, name: Python教程 - 廖雪峰的官方网站, url: 'http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000'}
+- {category: Python, langDep: true, name: 像计算机科学家一样思考Python, url: 'https://www.ctolib.com/docs/sfile/think-python-2e/0.html'}
+- {category: Python, langDep: true, name: 深入 Python 3, url: 'https://github.com/jiechic/diveintopython3'}
+- {category: Python, langDep: true, name: 笨办法学 Python, url: 'http://old.sebug.net/paper/books/LearnPythonTheHardWay/'}
+- {category: Python, langDep: true, name: 简明 Python 教程, url: 'https://bop.molun.net'}
+- {category: Django, langDep: true, name: Django Girls 教程, url: 'https://tutorial.djangogirls.org/zh/'}
+- {category: R, langDep: true, name: 153分钟学会 R, url: 'http://cran.r-project.org/doc/contrib/Liu-FAQ.pdf'}
+- {category: R, langDep: true, name: R 导论, url: 'http://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf'}
+- {category: R, langDep: true, name: 用 R 构建 Shiny 应用程序, url: 'http://yanping.me/shiny-tutorial/'}
+- {category: R, langDep: true, name: 统计学与 R 读书笔记, url: 'http://cran.r-project.org/doc/contrib/Xu-Statistics_and_R.pdf'}
+- {category: reStructuredText, langDep: true, name: reStructuredText 入门, url: 'http://www.pythondoc.com/sphinx/rest.html'}
+- {category: Ruby, langDep: true, name: Rails 风格指南, url: 'https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhCN.md'}
+- {category: Ruby, langDep: true, name: Ruby on Rails 实战圣经, url: 'https://ihower.tw/rails4/'}
+- {category: Ruby, langDep: true, name: Ruby on Rails 指南, url: 'http://guides.ruby-china.org'}
+- {category: Ruby, langDep: true, name: Ruby 风格指南, url: 'https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhCN.md'}
+- {category: Ruby, langDep: true, name: Sinatra, url: 'http://www.sinatrarb.com/intro-zh.html'}
+- {category: Ruby, langDep: true, name: 笨方法学 Ruby, url: 'http://lrthw.github.io'}
+- {category: Rust, langDep: true, name: Rust 官方教程, url: 'https://github.com/KaiserY/rust-book-chinese'}
+- {category: Rust, langDep: true, name: Rust 语言学习笔记, url: 'https://github.com/photino/rust-notes'}
+- {category: Rust, langDep: true, name: RustPrimer, url: 'https://github.com/rustcc/RustPrimer'}
+- {category: Rust, langDep: true, name: 通过例子学习 Rust, url: 'https://github.com/rustcc/rust-by-example/'}
+- {category: Scala, langDep: true, name: Effective Scala, url: 'http://twitter.github.io/effectivescala/index-cn.html'}
+- {category: Scala, langDep: true, name: Scala 初学者指南, url: 'https://www.gitbook.com/book/windor/beginners-guide-to-scala/details'}
+- {category: Scala, langDep: true, name: Scala 课堂, url: 'http://twitter.github.io/scala_school/zh_cn/index.html'}
+- {category: Scheme, langDep: true, name: Scheme 入门教程, url: 'http://deathking.github.io/yast-cn/'}
+- {category: Scratch, langDep: true, name: 创意计算课程指南, url: 'http://cccgchinese.strikingly.com'}
+- {category: Shell, langDep: true, name: shell-book, url: 'http://me.52fhy.com/shell-book/'}
+- {category: Shell, langDep: true, name: Shell 编程基础, url: 'http://wiki.ubuntu.org.cn/Shell%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80'}
+- {category: Shell, langDep: true, name: Shell 脚本编程30分钟入门, url: 'https://github.com/qinjx/30min_guides/blob/master/shell.md'}
+- {category: Shell, langDep: true, name: The Linux Command Line 中文版, url: 'http://billie66.github.io/TLCL/book/'}
+- {category: Swift, langDep: true, name: 《The Swift Programming Language》中文版, url: 'https://www.gitbook.com/book/numbbbbb/-the-swift-programming-language-/details'}
+- {category: Vim, langDep: true, name: Vim Manual(中文版), url: 'http://man.chinaunix.net/newsoft/vi/doc/help.html'}
+- {category: Vim, langDep: true, name: 大家來學 VIM, url: 'http://www.study-area.org/tips/vim/index.html'}
+- {category: Visual, langDep: true, name: Visual Prolog 7初学指南, url: 'http://wiki.visual-prolog.com/index.php?title=A_Beginners_Guide_to_Visual_Prolog_in_Chinese'}
+- {category: Visual, langDep: true, name: Visual Prolog 7边练边学, url: 'http://wiki.visual-prolog.com/index.php?title=Visual_Prolog_for_Tyros_in_Chinese'}
