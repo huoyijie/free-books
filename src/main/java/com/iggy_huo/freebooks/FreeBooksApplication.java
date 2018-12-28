@@ -25,7 +25,7 @@ public class FreeBooksApplication {
     public RouterFunction<ServerResponse> routerFunction() {
         return RouterFunctions
                 .route(GET("/demo"), serverRequest -> ServerResponse.ok().body(fromObject("Demo OK")))
-                .andRoute(GET("/").or(GET("/index")), serverRequest -> ServerResponse.ok().render("index", BookList.loadBooks())
+                .andRoute(GET("/").or(GET("/index")), serverRequest -> ServerResponse.ok().render("index", BookList.loadBooks().toBookShelf())
         );
     }
 

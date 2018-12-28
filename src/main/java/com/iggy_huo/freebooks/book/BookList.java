@@ -24,6 +24,13 @@ import java.util.List;
 public class BookList {
     private List<Book> books;
 
+    public BookShelf toBookShelf() {
+        BookShelf bookShelf = new BookShelf(new ArrayList<>());
+        books.forEach(bookShelf::addBook);
+        // books.stream().forEach(bookShelf::addBook);
+        return bookShelf;
+    }
+
     public static BookList loadBooks() {
         Constructor cons = new Constructor(BookList.class);
         TypeDescription td = new TypeDescription(BookList.class);

@@ -1,370 +1,2159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Free Books</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/all.css"/>
+    <style type="text/css">
+        .shelf {
+            border: 5px #9E5D08 solid;
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        .col {
+            padding: 0;
+            height: 200px;
+            border: 5px #9E5D08 solid;
+            overflow: hidden;
+        }
+
+        .books {
+            border-top: 15px solid black;
+            border-left: 10px solid black;
+            padding-top: 10px;
+        }
+
+        .book {
+            width: 40px;
+            height: 100%;
+            border: 1px #17a2b8 solid;
+            writing-mode: vertical-rl;
+            margin-right: 1px;
+        }
+
+        .book-bg-orangered {
+            background-color: orangered;
+        }
+
+        .book-bg-deepskyblue {
+            background-color: deepskyblue;
+        }
+
+        .book-bg-purple {
+            background-color: purple;
+        }
+
+        .book-bg-darkcyan {
+            background-color: darkcyan;
+        }
+
+        .book-name {
+            font-size: x-small;
+            width: 100%;
+            height: 90%;
+            overflow: hidden;
+        }
+
+        .book-name a {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    Hello World!<br>
-        <a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial">IntelliJ IDEA 简体中文专题教程</a><br>
-        <a href="http://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html">21分钟MySQL入门教程</a><br>
-        <a href="http://blog.codinglabs.org/articles/theory-of-mysql-index.html">MySQL索引背后的数据结构及算法原理</a><br>
-        <a href="http://disque.huangz.me">Disque 使用教程</a><br>
-        <a href="http://redisdoc.com">Redis 命令参考</a><br>
-        <a href="http://redisbook.com">Redis 设计与实现</a><br>
-        <a href="https://github.com/justinyhuang/the-little-mongodb-book-cn/blob/master/mongodb.md">The Little MongoDB Book</a><br>
-        <a href="https://github.com/JasonLai256/the-little-redis-book/blob/master/cn/redis.md">The Little Redis Book</a><br>
-        <a href="https://github.com/huangz1990/annotated_redis_source">带有详细注释的 Redis 2.6 代码</a><br>
-        <a href="https://github.com/huangz1990/redis-3.0-annotated">带有详细注释的 Redis 3.0 代码</a><br>
-        <a href="http://works.jinbuguo.com/postgresql/menu823/index.html">PostgreSQL 8.2.3 中文文档</a><br>
-        <a href="http://www.postgres.cn/docs/9.3/index.html">PostgreSQL 9.3.1 中文文档</a><br>
-        <a href="http://www.postgres.cn/docs/9.4/index.html">PostgreSQL 9.4.4 中文文档</a><br>
-        <a href="http://www.postgres.cn/docs/9.5/index.html">PostgreSQL 9.5.3 中文文档</a><br>
-        <a href="http://www.postgres.cn/docs/9.6/index.html">PostgreSQL 9.6.0 中文文档</a><br>
-        <a href="https://www.gitbook.com/book/juntao/3-web-designs-in-3-weeks/details">3 Web Designs in 3 Weeks</a><br>
-        <a href="https://github.com/CN-Chrome-DevTools/CN-Chrome-DevTools">Chrome 开发者工具中文手册</a><br>
-        <a href="http://open.chrome.360.cn/extension_dev/overview.html">Chrome扩展开发文档</a><br>
-        <a href="https://github.com/phodal/growth-ebook">Growth: 全栈增长工程师指南</a><br>
-        <a href="http://www.gruntjs.net">Grunt中文文档</a><br>
-        <a href="https://github.com/nimojs/gulp-book">Gulp 入门指南</a><br>
-        <a href="http://www.gulpjs.com.cn/docs/">gulp中文文档</a><br>
-        <a href="https://github.com/bolasblack/http-api-guide">HTTP 接口设计指北</a><br>
-        <a href="http://yuedu.baidu.com/ebook/478d1a62376baf1ffc4fad99?pn=1">HTTP/2.0 中文翻译</a><br>
-        <a href="https://www.gitbook.com/book/ye11ow/http2-explained/details">http2讲解</a><br>
-        <a href="https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md">JSON风格指南</a><br>
-        <a href="http://man.lupaworld.com/content/network/wireshark/index.html">Wireshark用户手册</a><br>
-        <a href="https://community.emc.com/thread/194901">一站式学习Wireshark</a><br>
-        <a href="http://www.20thingsilearned.com/zh-CN/home">关于浏览器和网络的 20 项须知</a><br>
-        <a href="http://coderlmn.github.io/code-standards/">前端代码规范 及 最佳实践</a><br>
-        <a href="https://github.com/fouber/blog/issues/2">前端开发体系建设日记</a><br>
-        <a href="https://github.com/hacke2/hacke2.github.io/issues/1">前端资源分享（一）</a><br>
-        <a href="https://github.com/hacke2/hacke2.github.io/issues/3">前端资源分享（二）</a><br>
-        <a href="http://deerchao.net/tutorials/regex/regex.htm">正则表达式30分钟入门教程</a><br>
-        <a href="http://jinlong.github.io/2013/08/29/devtoolsecrets/">浏览器开发工具的秘密</a><br>
-        <a href="https://github.com/AlloyTeam/Mars">移动Web前端知识库</a><br>
-        <a href="https://github.com/hoosin/mobile-web-favorites">移动前端开发收藏夹</a><br>
-        <a href="http://works.jinbuguo.com/apache/menu22/index.html">Apache 中文手册</a><br>
-        <a href="http://tengine.taobao.org/book/index.html">Nginx开发从入门到精通</a><br>
-        <a href="http://www.ttlsa.com/nginx/nginx-stu-pdf/">Nginx教程从入门到精通</a><br>
-        <a href="https://softwaredownload.gitbooks.io/openwrt-fanqiang/content/">OpenWrt智能、自动、透明翻墙路由器教程</a><br>
-        <a href="https://community.emc.com/docs/DOC-16067">SAN 管理入门系列</a><br>
-        <a href="http://sketchcn.com/sketch-chinese-user-manual.html#introduce">Sketch 中文手册</a><br>
-        <a href="http://ifeve.com/perfbook/">深入理解并行编程</a><br>
-        <a href="https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn">傻瓜函数编程</a><br>
-        <a href="http://dcaoyuan.github.io/papers/pdfs/Scalability.pdf">走向分布式</a><br>
-        <a href="http://edu.51cto.com">51CTO学院</a><br>
-        <a href="https://www.codecademy.com/?locale_code=zh">Codecademy</a><br>
-        <a href="https://www.codeschool.com">CodeSchool</a><br>
-        <a href="https://www.coursera.org/courses?orderby=upcoming&lngs=zh">Coursera</a><br>
-        <a href="https://learnxinyminutes.com">Learn X in Y minutes</a><br>
-        <a href="https://www.shiyanlou.com">shiyanlou</a><br>
-        <a href="https://teamtreehouse.com">TeamTreeHouse</a><br>
-        <a href="https://www.udacity.com">Udacity</a><br>
-        <a href="https://www.xuetangx.com">xuetangX</a><br>
-        <a href="http://www.imooc.com/course/list">慕课网</a><br>
-        <a href="http://www.jikexueyuan.com">极客学院</a><br>
-        <a href="http://www.hubwiz.com">汇智网</a><br>
-        <a href="http://www.jisuanke.com">计蒜客</a><br>
-        <a href="https://aiyanbo.gitbooks.io/spark-programming-guide-zh-cn/content/">Spark 编程指南简体中文版</a><br>
-        <a href="https://code.csdn.net/CODE_Translation/spark_matei_phd">大型集群上的快速和通用数据处理架构</a><br>
-        <a href="https://github.com/linyiqun/DataMiningAlgorithm">数据挖掘中经典的算法实现和详细的注释</a><br>
-        <a href="http://dataminingguide.books.yourtion.com">面向程序员的数据挖掘指南</a><br>
-        <a href="http://man.chinaunix.net/linux/debian/reference/reference.zh-cn.html">Debian 参考手册 </a><br>
-        <a href="https://github.com/yeasy/docker_practice">Docker —— 从入门到实践</a><br>
-        <a href="https://github.com/widuu/chinese_docker">Docker中文指南</a><br>
-        <a href="http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1">Docker入门实战</a><br>
-        <a href="http://www.freebsd.org/doc/zh_CN.UTF-8/books/handbook/">FreeBSD 使用手册</a><br>
-        <a href="https://tinylab.gitbooks.io/linux-doc/content/zh-cn/">Linux Documentation (中文版)</a><br>
-        <a href="http://happypeter.github.io/LGCB/book/">Linux Guide for Complete Beginners</a><br>
-        <a href="http://works.jinbuguo.com/lfs/lfs62/index.html">Linux 构建指南</a><br>
-        <a href="http://sourceforge.net/projects/elpi/">Linux 系统高级编程</a><br>
-        <a href="https://github.com/me115/linuxtools_rst">Linux工具快速教程</a><br>
-        <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/">Mac 开发配置手册</a><br>
-        <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces</a><br>
-        <a href="http://billie66.github.io/TLCL/index.html">The Linux Command Line</a><br>
-        <a href="http://wiki.ubuntu.org.cn/UbuntuManual">Ubuntu 参考手册 </a><br>
-        <a href="https://www.gitbook.com/book/objectkuan/ucore-docs/details">uCore Lab: Operating System Course in Tsinghua University</a><br>
-        <a href="http://cb.vu/unixtoolbox_zh_CN.xhtml">UNIX TOOLBOX</a><br>
-        <a href="https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md">命令行的艺术</a><br>
-        <a href="https://tinylab.gitbooks.io/elinux/content/zh/">嵌入式 Linux 知识库 (eLinux.org 中文版)</a><br>
-        <a href="http://i.linuxtoy.org/docs/guide/index.html">开源世界旅行手册</a><br>
-        <a href="https://github.com/tobegit3hub/understand_linux_process">理解Linux进程</a><br>
-        <a href="http://cn.linux.vbird.org/linux_basic/linux_basic.php">鸟哥的 Linux 私房菜 基础学习篇</a><br>
-        <a href="http://cn.linux.vbird.org/linux_server/">鸟哥的 Linux 私房菜 服务器架设篇</a><br>
-        <a href="http://redisbook.com">Redis 设计与实现</a><br>
-        <a href="https://github.com/justinyhuang/the-little-mongodb-book-cn">The Little MongoDB Book 中文版</a><br>
-        <a href="https://github.com/phodal/designiot">一步步搭建物联网系统</a><br>
-        <a href="http://www.runoob.com/regexp/regexp-tutorial.html">正则表达式-菜鸟教程</a><br>
-        <a href="https://web.archive.org/web/20161119141236/http://deerchao.net:80/tutorials/regex/regex.htm">正则表达式30分钟入门教程</a><br>
-        <a href="http://rogerdudler.github.io/git-guide/index.zh.html">Git - 简易指南</a><br>
-        <a href="https://github.com/flyhigher139/Git-Cheat-Sheet">Git-Cheat-Sheet</a><br>
-        <a href="http://gitbook.liuhui998.com">Git Community Book 中文版</a><br>
-        <a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html">git-flow 备忘清单</a><br>
-        <a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/">Git magic</a><br>
-        <a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/">Git Magic</a><br>
-        <a href="http://gitref.justjavac.com">Git 参考手册</a><br>
-        <a href="https://github.com/waylau/github-help">Github帮助文档</a><br>
-        <a href="https://snowdream86.gitbooks.io/github-cheat-sheet/content/zh/">GitHub秘籍</a><br>
-        <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a><br>
-        <a href="https://github.com/gotgit/gotgithub">Got GitHub</a><br>
-        <a href="http://www.worldhello.net/gotgithub/index.html">GotGitHub</a><br>
-        <a href="https://zh-hginit.readthedocs.io/en/latest/">HgInit (中文版)</a><br>
-        <a href="https://www.mercurial-scm.org/wiki/ChineseTutorial">Mercurial 使用教程</a><br>
-        <a href="https://git-scm.com/book/zh/v2">Pro Git</a><br>
-        <a href="https://www.gitbook.com/book/0532/progit/details">Pro Git 中文版</a><br>
-        <a href="http://svnbook.red-bean.com/nightly/zh/index.html">svn 手册</a><br>
-        <a href="http://pcottle.github.io/learnGitBranching/">学习 Git 分支</a><br>
-        <a href="http://igit.linuxtoy.org/index.html">沉浸式学 Git</a><br>
-        <a href="http://backlogtool.com/git-guide/cn/">猴子都能懂的GIT入门</a><br>
-        <a href="http://www.kancloud.cn/kancloud/a-programmer-prepares">程序员的自我修养</a><br>
-        <a href="https://www.gitbook.com/book/fuxiaopang/learnelasticsearch/details">ElasticSearch 权威指南</a><br>
-        <a href="http://es.xiaoleilu.com">Elasticsearch 权威指南（中文版）</a><br>
-        <a href="http://kibana.logstash.es">ELKstack 中文指南</a><br>
-        <a href="https://github.com/chenryn/logstash-best-practice-cn">Logstash 最佳实践</a><br>
-        <a href="http://udn.yyuap.com/doc/mastering-elasticsearch/">Mastering Elasticsearch(中文版)</a><br>
-        <a href="https://www.gitbook.com/book/wizardforcel/puppet-27-cookbook/details">Puppet 2.7 Cookbook 中文版</a><br>
-        <a href="http://read.douban.com/ebook/4972883/">取悦的工序：如何理解游戏</a><br>
-        <a href="http://www.oschina.net/translate/what-every-programmer-should-know-about-memory-part1?print">每个程序员都应该了解的内存知识(译)</a><br>
-        <a href="https://github.com/julycoding/The-Art-Of-Programming-by-July">程序员编程艺术</a><br>
-        <a href="http://www.kancloud.cn/kancloud/intro-to-prog/52592">编程入门指南</a><br>
-        <a href="https://github.com/DeathKing/Learning-SICP">《计算机程序的结构和解释》公开课 翻译项目</a><br>
-        <a href="http://exvim.github.io/docs-zh/intro/">exvim--vim 改良成IDE项目</a><br>
-        <a href="https://github.com/vimcn/vimcdoc">Vim中文文档</a><br>
-        <a href="https://github.com/yangyangwithgnu/use_vim_as_ide">所需即所获：像 IDE 一样使用 vim</a><br>
-        <a href="http://learnvimscriptthehardway.onefloweroneworld.com">笨方法学Vimscript 中译本</a><br>
-        <a href="https://learnopengl-cn.github.io">LearnOpenGL CN</a><br>
-        <a href="https://github.com/zilongshanren/opengl-tutorials">OpenGL 教程</a><br>
-        <a href="http://blog.csdn.net/lovelion/article/details/17517213">史上最全设计模式导学目录</a><br>
-        <a href="https://github.com/me115/design_patterns">图说设计模式</a><br>
-        <a href="https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn">傻瓜函数编程</a><br>
-        <a href="http://www.infoq.com/cn/minibooks/scrum-xp-from-the-trenches">硝烟中的 Scrum 和 XP</a><br>
-        <a href="http://docs.huihoo.com/gnu/linux/gmake.html">GNU make 指南</a><br>
-        <a href="https://github.com/waylau/Gradle-2-User-Guide">Gradle 2 用户指南</a><br>
-        <a href="http://yuedu.baidu.com/ebook/f23af265998fcc22bcd10da2">Gradle 中文使用文档</a><br>
-        <a href="https://web.archive.org/web/20170616013024/http://local.joelonsoftware.com/wiki/Chinese_(Simplified">Joel谈软件</a><br>
-        <a href="https://github.com/fool2fish/selenium-doc">selenium 中文文档</a><br>
-        <a href="http://www.ituring.com.cn/book/1143">开源软件架构</a><br>
-        <a href="http://article.yeeyan.org/view/2251/94882">持续集成（第二版）</a><br>
-        <a href="https://web.archive.org/web/20170615232349/http://local.joelonsoftware.com/wiki/首頁">約耳談軟體(Joel on Software)</a><br>
-        <a href="https://github.com/ecomfe/spec">编码规范</a><br>
-        <a href="http://www.ibm.com/developerworks/cn/java/j-ap/">让开发自动化系列专栏</a><br>
-        <a href="http://www.ibm.com/developerworks/cn/java/j-cq/">追求代码质量</a><br>
-        <a href="http://www.apkbus.com/design/index.html">Android Design(中文版)</a><br>
-        <a href="https://github.com/CharonChui/AndroidNote">Android Note(开发过程中积累的知识点)</a><br>
-        <a href="http://leanote.com/blog/post/561658f938f41126b2000298">Android6.0新特性详解</a><br>
-        <a href="http://stormzhang.github.io/android/2014/07/07/learn-android-from-rookie/">Android学习之路</a><br>
-        <a href="https://github.com/bboyfeiyu/android-tech-frontier">Android开发技术前线(android-tech-frontier)</a><br>
-        <a href="http://hukai.me/android-training-course-in-chinese/index.html">Google Android官方培训课程中文版</a><br>
-        <a href="http://wiki.jikexueyuan.com/project/material-design/">Material Design 中文版</a><br>
-        <a href="https://github.com/FX-Max/Point-of-Android">Point-of-Android</a><br>
-        <a href="http://awk.readthedocs.org/en/latest/index.html">awk中文指南</a><br>
-        <a href="https://github.com/wuzhouhui/awk">awk程序设计语言</a><br>
-        <a href="http://c-faq-chn.sourceforge.net/ccfaq/ccfaq.html">C 语言常见问题集</a><br>
-        <a href="http://doc.lellansin.com">C/C++ 学习教程</a><br>
-        <a href="http://docs.linuxtone.org/ebooks/C&CPP/c/">Linux C 编程一站式学习</a><br>
-        <a href="https://github.com/limingth/NCCL">新概念 C 语言教程</a><br>
-        <a href="http://book.douban.com/subject/24827879/">精通C#(第6版) </a><br>
-        <a href="https://github.com/hellogcc/100-gcc-tips/blob/master/src/index.md">100个gcc小技巧</a><br>
-        <a href="https://github.com/hellogcc/100-gdb-tips/blob/master/src/index.md">100个gdb小技巧</a><br>
-        <a href="https://tinylab.gitbooks.io/cbook/content/">C 语言编程透视</a><br>
-        <a href="https://github.com/andycai/cprimer">C/C++ Primer</a><br>
-        <a href="http://www.sunistudio.com/cppfaq/">C++ FAQ LITE(中文版)</a><br>
-        <a href="https://github.com/Mooophy/Cpp-Primer">C++ Primer 5th Answers</a><br>
-        <a href="https://github.com/wuye9036/CppTemplateTutorial">C++ Template 进阶指南</a><br>
-        <a href="http://www.prglab.com/cms/">C++ 基础教程</a><br>
-        <a href="https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/">C++ 并发编程(基于C++11)</a><br>
-        <a href="https://github.com/forhappy/Cplusplus-Concurrency-In-Practice">C++ 并发编程指南</a><br>
-        <a href="https://github.com/leeyiw/cgdb-manual-in-chinese">CGDB中文手册</a><br>
-        <a href="https://web.archive.org/web/20170615174144/http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf">Cmake 实践</a><br>
-        <a href="http://docs.huihoo.com/gnu/linux/gmake.html">GNU make 指南</a><br>
-        <a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-cpp-styleguide/contents/">Google C++ 风格指南</a><br>
-        <a href="http://www.kuqin.com/qtdocument/tutorial.html">QT 教程</a><br>
-        <a href="https://github.com/anjuke/zguide-cn">ZMQ 指南</a><br>
-        <a href="http://www.ituring.com.cn/book/1203">像计算机科学家一样思考（C++版)</a><br>
-        <a href="http://www.nowamagic.net/librarys/books/contents/c">简单易懂的C魔法</a><br>
-        <a href="http://scc.qibebt.cas.cn/docs/linux/base/%B8%FA%CE%D2%D2%BB%C6%F0%D0%B4Makefile-%B3%C2%F0%A9.pdf">跟我一起写Makefile(PDF)</a><br>
-        <a href="http://coffee-script.org">CoffeeScript 中文</a><br>
-        <a href="https://github.com/elrrrrrrr/coffeescript-style-guide/blob/master/README-ZH.md">CoffeeScript 编程风格指南</a><br>
-        <a href="http://dart.lidian.info/wiki/Language_Tour">Dart 语言导览</a><br>
-        <a href="https://github.com/looly/elasticsearch-definitive-guide-cn">Elasticsearch 权威指南</a><br>
-        <a href="http://kibana.logstash.es">ELKstack 中文指南</a><br>
-        <a href="http://udn.yyuap.com/doc/mastering-elasticsearch/">Mastering Elasticsearch(中文版)</a><br>
-        <a href="https://github.com/Ljzn/ElixrGettingStartedChinese">Elixir Getting Started 中文翻译</a><br>
-        <a href="https://elixirschool.com/cn/">Elixir 编程语言教程</a><br>
-        <a href="https://github.com/Ljzn/MetaProgrammingInElixirChinese">Elixir元编程与DSL 中文翻译</a><br>
-        <a href="https://mydearxym.gitbooks.io/phoenix-doc-in-chinese/content/">Phoenix 框架中文文档</a><br>
-        <a href="https://github.com/liancheng/cpie-cn">Erlang 并发编程</a><br>
-        <a href="http://micro.ustc.edu.cn/Fortran/ZJDing/">Fortran77和90/95编程入门</a><br>
-        <a href="https://github.com/astaxie/build-web-application-with-golang">Go Web 编程</a><br>
-        <a href="https://github.com/Unknwon/the-way-to-go_ZH_CN">Go 入门指南</a><br>
-        <a href="https://github.com/golang-china/golangdoc.translations">Go 官方文档翻译</a><br>
-        <a href="https://tour.go-zh.org/list">Go 指南</a><br>
-        <a href="https://github.com/songleo/the-little-go-book_ZH_CN">Go 简易教程</a><br>
-        <a href="https://github.com/Unknwon/go-fundamental-programming">Go 编程基础</a><br>
-        <a href="https://github.com/rujews/go-in-action-notes">Go 语言实战笔记</a><br>
-        <a href="https://github.com/polaris1119/The-Golang-Standard-Library-by-Example">Go 语言标准库</a><br>
-        <a href="https://github.com/chai2010/advanced-go-programming-book">Go 语言高级编程（Advanced Go Programming）</a><br>
-        <a href="https://github.com/hyper-carrot/go_command_tutorial">Go命令教程</a><br>
-        <a href="https://github.com/astaxie/Go-in-Action">Go实战开发</a><br>
-        <a href="https://github.com/achun/Go-Blog-In-Action">Go语言博客实践</a><br>
-        <a href="http://blog.csdn.net/dc_726/article/details/46565241">Java程序员的Golang入门指南</a><br>
-        <a href="https://github.com/astaxie/NPWG_zh">Network programming with Go 中文翻译版本</a><br>
-        <a href="http://gorevel.cn/docs/manual/index.html">Revel 框架手册</a><br>
-        <a href="http://mikespook.com/learning-go/">学习Go语言</a><br>
-        <a href="http://go.ctolib.com/docs/read/magical-go-c-index.html">神奇的 Go 语言</a><br>
-        <a href="http://www.ibm.com/developerworks/cn/java/j-pg/">实战 Groovy 系列</a><br>
-        <a href="http://learnyoua.haskell.sg">Haskell 趣学指南</a><br>
-        <a href="http://cnhaskell.com">Real World Haskell 中文版</a><br>
-        <a href="https://github.com/waylau/css3-tutorial">CSS3 Tutorial 《CSS3 教程》</a><br>
-        <a href="http://css.doyoe.com">CSS参考手册</a><br>
-        <a href="http://yanxyz.github.io/emmet-docs/">Emmet 文档</a><br>
-        <a href="http://www.w3school.com.cn/html5/">HTML5 教程</a><br>
-        <a href="http://codeguide.bootcss.com">HTML和CSS编码规范</a><br>
-        <a href="http://sass-guidelin.es/zh/">Sass Guidelines 中文</a><br>
-        <a href="http://alloyteam.github.io/CodeGuide/">前端代码规范</a><br>
-        <a href="http://zh.learnlayout.com">学习CSS布局</a><br>
-        <a href="https://github.com/chadluo/CSS-Guidelines/blob/master/README.md">通用 CSS 笔记、建议与指导</a><br>
-        <a href="http://nilsun.github.io/apple-watch/">Apple Watch开发初探</a><br>
-        <a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-objc-styleguide/">Google Objective-C Style Guide 中文版</a><br>
-        <a href="http://isux.tencent.com/ios-human-interface-guidelines-ui-design-basics-ios7.html">iOS7人机界面指南</a><br>
-        <a href="https://github.com/qinjx/30min_guides/blob/master/ios.md">iOS开发60分钟入门</a><br>
-        <a href="http://wileam.com/iphone-6-screen-cn/">iPhone 6 屏幕揭秘</a><br>
-        <a href="https://github.com/jkyin/Subtitle">网易斯坦福大学公开课：iOS 7应用开发字幕文件</a><br>
-        <a href="https://github.com/waylau/activiti-5.x-user-guide">Activiti 5.x 用户指南</a><br>
-        <a href="https://github.com/waylau/apache-mina-2.x-user-guide">Apache MINA 2 用户指南</a><br>
-        <a href="https://github.com/waylau/apache-shiro-1.2.x-reference">Apache Shiro 用户指南</a><br>
-        <a href="http://www.hawstein.com/posts/google-java-style.html">Google Java编程风格指南</a><br>
-        <a href="https://github.com/waylau/h2-database-doc">H2 Database 教程</a><br>
-        <a href="https://github.com/waylau/servlet-3.1-specification">Java Servlet 3.1 规范</a><br>
-        <a href="https://github.com/waylau/java-code-conventions">Java 编码规范</a><br>
-        <a href="https://github.com/waylau/Jersey-2.x-User-Guide">Jersey 2.x 用户指南</a><br>
-        <a href="https://github.com/waylau/jsse-reference-guide">JSSE 参考指南</a><br>
-        <a href="http://mybatis.github.io/mybatis-3/zh/index.html">MyBatis中文文档</a><br>
-        <a href="https://github.com/waylau/netty-4-user-guide">Netty 4.x 用户指南</a><br>
-        <a href="https://github.com/waylau/essential-netty-in-action">Netty 实战(精髓)</a><br>
-        <a href="https://github.com/waylau/rest-in-action">REST 实战</a><br>
-        <a href="https://github.com/qibaoguang/Spring-Boot-Reference-Guide">Spring Boot参考指南</a><br>
-        <a href="https://github.com/waylau/spring-framework-4-reference">Spring Framework 4.x参考文档</a><br>
-        <a href="https://github.com/waylau/RestDemo">用jersey构建REST服务</a><br>
-        <a href="https://github.com/adamlu/javascript-style-guide">Airbnb JavaScript 规范</a><br>
-        <a href="https://github.com/zensh/AngularjsTutorial_cn">AngularJS入门教程</a><br>
-        <a href="https://github.com/mgechev/angularjs-style-guide/blob/master/README-zh-cn.md">AngularJS最佳实践和风格指南</a><br>
-        <a href="http://www.waylau.com/build-angularjs-app-with-yeoman-in-windows/">在Windows环境下用Yeoman构建AngularJS项目</a><br>
-        <a href="https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md">构建自己的AngularJS</a><br>
-        <a href="http://www.css88.com/doc/backbone/">backbone.js中文文档</a><br>
-        <a href="http://www.the5fire.com/backbone-js-tutorials-pdf-download.html">backbone.js入门教程</a><br>
-        <a href="https://github.com/the5fire/backbonejs-learning-note">Backbone.js入门教程第二版</a><br>
-        <a href="http://www.ituring.com.cn/minibook/950">Chrome扩展及应用开发</a><br>
-        <a href="https://github.com/geekplux/coffeescript-style-guide">CoffeeScript 编码风格指南</a><br>
-        <a href="http://d3.decembercafe.org">Learning D3.JS</a><br>
-        <a href="https://github.com/mbostock/d3/wiki/API--%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C">官方API文档</a><br>
-        <a href="http://blog.csdn.net/zhang__tianxu/article/category/1623437">张天旭的D3教程</a><br>
-        <a href="http://www.cnblogs.com/winleisure/tag/D3.js/">楚狂人的D3教程</a><br>
-        <a href="http://es6.ruanyifeng.com">ECMAScript 6 入门</a><br>
-        <a href="http://extjs-doc-cn.github.io/ext4api/">Ext4.1.0 中文文档</a><br>
-        <a href="http://bq69.com/blog/articles/script/868/google-javascript-style-guide.html">Google JavaScript 代码风格指南</a><br>
-        <a href="https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md">Google JSON 风格指南</a><br>
-        <a href="https://github.com/kokdemo/impress.js-tutorial-in-Chinese">impress.js的中文教程</a><br>
-        <a href="http://liubin.github.io/promises-book/">JavaScript Promise迷你书</a><br>
-        <a href="https://web.archive.org/web/20170112164945/http://typeof.net/s/jsmech/">Javascript 原理</a><br>
-        <a href="http://javascript.ruanyifeng.com">JavaScript 标准参考教程（alpha）</a><br>
-        <a href="https://github.com/jayli/javascript-patterns">《JavaScript 模式》</a><br>
-        <a href="https://github.com/justjavac/12-javascript-quirks">javascript 的 12 个怪癖</a><br>
-        <a href="http://bonsaiden.github.io/JavaScript-Garden/zh/">JavaScript 秘密花园</a><br>
-        <a href="http://icodeit.org/jsccp/">JavaScript核心概念及实践</a><br>
-        <a href="http://pij.robinqu.me">Javascript编程指南</a><br>
-        <a href="http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html">How to write jQuery plugin</a><br>
-        <a href="http://www.nowamagic.net/librarys/books/contents/jquery">简单易懂的JQuery魔法</a><br>
-        <a href="http://expressjs.jser.us">express.js 中文文档</a><br>
-        <a href="http://javascript.ruanyifeng.com/nodejs/express.html">Express框架</a><br>
-        <a href="https://github.com/guo-yu/koa-guide">koa 中文文档</a><br>
-        <a href="https://www.npmjs.com/package/learnyounode-zh-cn">Learn You The Node.js For Much Win! (中文版)</a><br>
-        <a href="http://i5ting.github.io/node-debug-tutorial/">Node debug 三法三例</a><br>
-        <a href="https://github.com/jollen/nodejs-fullstack-lessons">Node.js Fullstack《從零到一的進撃》</a><br>
-        <a href="https://github.com/alsotang/node-lessons">Node.js 包教不包会</a><br>
-        <a href="https://github.com/nodejs-tw/nodejs-wiki-book">Nodejs Wiki Book</a><br>
-        <a href="https://www.gitbook.com/book/0532/nodejs/details">nodejs中文文档</a><br>
-        <a href="http://www.nodebeginner.org/index-zh-cn.html">Node入门</a><br>
-        <a href="http://nqdeng.github.io/7-days-nodejs/">七天学会NodeJS</a><br>
-        <a href="https://github.com/nswbmw/N-blog">使用 Express + MongoDB 搭建多人博客</a><br>
-        <a href="http://nodejs.ctolib.com/docs/sfile/jstraining/engineering.html">JavaScript全栈工程师培训材料</a><br>
-        <a href="https://github.com/theJian/build-a-hn-front-page">Learn React & Webpack by building the Hacker News front page</a><br>
-        <a href="https://github.com/hateonion/react-bits-CN">React-Bits 中文文档</a><br>
-        <a href="http://wiki.jikexueyuan.com/project/react-native/">React Native 中文文档(含最新Android内容)</a><br>
-        <a href="https://github.com/fakefish/react-webpack-cookbook">React webpack-cookbook</a><br>
-        <a href="https://discountry.github.io/react/">React.js 中文文档</a><br>
-        <a href="http://fraserxu.me/intro-to-react/">React.js 入门教程</a><br>
-        <a href="https://cn.vuejs.org/v2/guide/">Vue.js中文文档</a><br>
-        <a href="http://css88.com/doc/zeptojs_api">Zepto.js 中文文档</a><br>
-        <a href="https://github.com/getify/You-Dont-Know-JS/tree/1ed-zh-CN">你不知道的Javascript</a><br>
-        <a href="http://justjavac.com/named-function-expressions-demystified.html">命名函数表达式探秘</a><br>
-        <a href="http://www.oschina.net/translate/learning-javascript-design-patterns">学用 JavaScript 设计模式</a><br>
-        <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html">深入理解JavaScript系列</a><br>
-        <a href="http://www.dralpha.com/zh/tech/tech.htm">LaTeX 笔记</a><br>
-        <a href="http://ctan.org/pkg/lshort-zh-cn">一份不太简短的 LaTeX2ε 介绍</a><br>
-        <a href="https://github.com/49951331/graduate-project-102pj/blob/master/docs/latex123.pdf">大家來學 LaTeX</a><br>
-        <a href="http://acl.readthedocs.org/en/latest/">ANSI Common Lisp 中文翻译版</a><br>
-        <a href="http://www.ituring.com.cn/minibook/862">Common Lisp 高级编程技术</a><br>
-        <a href="http://www.w3cschool.cc/manual/lua53doc/contents.html">Lua 5.3 参考手册</a><br>
-        <a href="http://wowubuntu.com/markdown/basic.html">Markdown 快速入门</a><br>
-        <a href="http://www.jianshu.com/p/7bd23251da0a">Markdown 简明教程</a><br>
-        <a href="http://wowubuntu.com/markdown/">Markdown 语法说明</a><br>
-        <a href="http://www.jianshu.com/p/q81RER">献给写作者的 Markdown 新手指南</a><br>
-        <a href="http://www.nodebeginner.org/index-zh-cn.html">Node 入门</a><br>
-        <a href="https://www.gitbook.com/book/0532/nodejs/details">The NodeJS 中文文档</a><br>
-        <a href="http://nqdeng.github.io/7-days-nodejs/">七天学会NodeJS</a><br>
-        <a href="https://github.com/fayland/chinese-perl-book">Master Perl Today</a><br>
-        <a href="https://web.archive.org/web/20150326073235/http://net.pku.edu.cn/~yhf/tutorial/perl/perl.html">Perl 5 教程</a><br>
-        <a href="http://www.yiibai.com/perl">Perl 教程</a><br>
-        <a href="http://docs.phpcomposer.com">Composer中文文档</a><br>
-        <a href="http://d.laravel-china.org/docs/5.4">Laravel5.4中文文档</a><br>
-        <a href="http://www.myleftstudio.com">Phalcon7中文文档</a><br>
-        <a href="http://wulijun.github.io/php-the-right-way/">PHP 之道</a><br>
-        <a href="http://php.net/manual/zh/">PHP中文手册</a><br>
-        <a href="https://psr.phphub.org">PHP标准规范中文版</a><br>
-        <a href="https://wusuopu.gitbooks.io/symfony2_tutorial/content">Symfony2 实例教程</a><br>
-        <a href="http://www.yiichina.com/doc/guide/2.0">Yii2中文文档</a><br>
-        <a href="http://www.php-internals.com/book/">深入理解 PHP 内核</a><br>
-        <a href="https://www.yiyibooks.cn/xx/Django_1.11.6/index.html">Django 1.11.6 中文文档</a><br>
-        <a href="http://djangobook.py3k.cn/2.0/">Django book 2.0</a><br>
-        <a href="http://docspy3zh.readthedocs.org/en/latest/">Python 3 文档(简体中文) 3.2.2 documentation</a><br>
-        <a href="http://python3-cookbook.readthedocs.io/zh_CN/latest/">Python Cookbook第三版</a><br>
-        <a href="http://www.pythondoc.com">Python 中文学习大本营</a><br>
-        <a href="http://funhacks.net/explore-python">Python之旅</a><br>
-        <a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000">Python教程 - 廖雪峰的官方网站</a><br>
-        <a href="https://www.ctolib.com/docs/sfile/think-python-2e/0.html">像计算机科学家一样思考Python</a><br>
-        <a href="https://github.com/jiechic/diveintopython3">深入 Python 3</a><br>
-        <a href="http://old.sebug.net/paper/books/LearnPythonTheHardWay/">笨办法学 Python</a><br>
-        <a href="https://bop.molun.net">简明 Python 教程</a><br>
-        <a href="https://tutorial.djangogirls.org/zh/">Django Girls 教程</a><br>
-        <a href="http://cran.r-project.org/doc/contrib/Liu-FAQ.pdf">153分钟学会 R</a><br>
-        <a href="http://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf">R 导论</a><br>
-        <a href="http://yanping.me/shiny-tutorial/">用 R 构建 Shiny 应用程序</a><br>
-        <a href="http://cran.r-project.org/doc/contrib/Xu-Statistics_and_R.pdf">统计学与 R 读书笔记</a><br>
-        <a href="http://www.pythondoc.com/sphinx/rest.html">reStructuredText 入门</a><br>
-        <a href="https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhCN.md">Rails 风格指南</a><br>
-        <a href="https://ihower.tw/rails4/">Ruby on Rails 实战圣经</a><br>
-        <a href="http://guides.ruby-china.org">Ruby on Rails 指南</a><br>
-        <a href="https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhCN.md">Ruby 风格指南</a><br>
-        <a href="http://www.sinatrarb.com/intro-zh.html">Sinatra</a><br>
-        <a href="http://lrthw.github.io">笨方法学 Ruby</a><br>
-        <a href="https://github.com/KaiserY/rust-book-chinese">Rust 官方教程</a><br>
-        <a href="https://github.com/photino/rust-notes">Rust 语言学习笔记</a><br>
-        <a href="https://github.com/rustcc/RustPrimer">RustPrimer</a><br>
-        <a href="https://github.com/rustcc/rust-by-example/">通过例子学习 Rust</a><br>
-        <a href="http://twitter.github.io/effectivescala/index-cn.html">Effective Scala</a><br>
-        <a href="https://www.gitbook.com/book/windor/beginners-guide-to-scala/details">Scala 初学者指南</a><br>
-        <a href="http://twitter.github.io/scala_school/zh_cn/index.html">Scala 课堂</a><br>
-        <a href="http://deathking.github.io/yast-cn/">Scheme 入门教程</a><br>
-        <a href="http://cccgchinese.strikingly.com">创意计算课程指南</a><br>
-        <a href="http://me.52fhy.com/shell-book/">shell-book</a><br>
-        <a href="http://wiki.ubuntu.org.cn/Shell%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80">Shell 编程基础</a><br>
-        <a href="https://github.com/qinjx/30min_guides/blob/master/shell.md">Shell 脚本编程30分钟入门</a><br>
-        <a href="http://billie66.github.io/TLCL/book/">The Linux Command Line 中文版</a><br>
-        <a href="https://www.gitbook.com/book/numbbbbb/-the-swift-programming-language-/details">《The Swift Programming Language》中文版</a><br>
-        <a href="http://man.chinaunix.net/newsoft/vi/doc/help.html">Vim Manual(中文版)</a><br>
-        <a href="http://www.study-area.org/tips/vim/index.html">大家來學 VIM</a><br>
-        <a href="http://wiki.visual-prolog.com/index.php?title=A_Beginners_Guide_to_Visual_Prolog_in_Chinese">Visual Prolog 7初学指南</a><br>
-        <a href="http://wiki.visual-prolog.com/index.php?title=Visual_Prolog_for_Tyros_in_Chinese">Visual Prolog 7边练边学</a><br>
+    <div class="shelf w-100">
+        <div class="row">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial" class="d-block px-2 text-white">IntelliJ IDEA 简体中文专题教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.cnblogs.com/mr-wid/archive/2013/05/09/3068229.html" class="d-block px-2 text-white">21分钟MySQL入门教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://blog.codinglabs.org/articles/theory-of-mysql-index.html" class="d-block px-2 text-white">MySQL索引背后的数据结构及算法原理</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://disque.huangz.me" class="d-block px-2 text-white">Disque 使用教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://redisdoc.com" class="d-block px-2 text-white">Redis 命令参考</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://redisbook.com" class="d-block px-2 text-white">Redis 设计与实现</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/justinyhuang/the-little-mongodb-book-cn/blob/master/mongodb.md" class="d-block px-2 text-white">The Little MongoDB Book</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/JasonLai256/the-little-redis-book/blob/master/cn/redis.md" class="d-block px-2 text-white">The Little Redis Book</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/huangz1990/annotated_redis_source" class="d-block px-2 text-white">带有详细注释的 Redis 2.6 代码</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/huangz1990/redis-3.0-annotated" class="d-block px-2 text-white">带有详细注释的 Redis 3.0 代码</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://works.jinbuguo.com/postgresql/menu823/index.html" class="d-block px-2 text-white">PostgreSQL 8.2.3 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.postgres.cn/docs/9.3/index.html" class="d-block px-2 text-white">PostgreSQL 9.3.1 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.postgres.cn/docs/9.4/index.html" class="d-block px-2 text-white">PostgreSQL 9.4.4 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.postgres.cn/docs/9.5/index.html" class="d-block px-2 text-white">PostgreSQL 9.5.3 中文文档</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.postgres.cn/docs/9.6/index.html" class="d-block px-2 text-white">PostgreSQL 9.6.0 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/juntao/3-web-designs-in-3-weeks/details" class="d-block px-2 text-white">3 Web Designs in 3 Weeks</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/CN-Chrome-DevTools/CN-Chrome-DevTools" class="d-block px-2 text-white">Chrome 开发者工具中文手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://open.chrome.360.cn/extension_dev/overview.html" class="d-block px-2 text-white">Chrome扩展开发文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/phodal/growth-ebook" class="d-block px-2 text-white">Growth: 全栈增长工程师指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.gruntjs.net" class="d-block px-2 text-white">Grunt中文文档</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/nimojs/gulp-book" class="d-block px-2 text-white">Gulp 入门指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.gulpjs.com.cn/docs/" class="d-block px-2 text-white">gulp中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/bolasblack/http-api-guide" class="d-block px-2 text-white">HTTP 接口设计指北</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://yuedu.baidu.com/ebook/478d1a62376baf1ffc4fad99?pn=1" class="d-block px-2 text-white">HTTP/2.0 中文翻译</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/ye11ow/http2-explained/details" class="d-block px-2 text-white">http2讲解</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md" class="d-block px-2 text-white">JSON风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://man.lupaworld.com/content/network/wireshark/index.html" class="d-block px-2 text-white">Wireshark用户手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://community.emc.com/thread/194901" class="d-block px-2 text-white">一站式学习Wireshark</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.20thingsilearned.com/zh-CN/home" class="d-block px-2 text-white">关于浏览器和网络的 20 项须知</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://coderlmn.github.io/code-standards/" class="d-block px-2 text-white">前端代码规范 及 最佳实践</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/fouber/blog/issues/2" class="d-block px-2 text-white">前端开发体系建设日记</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/hacke2/hacke2.github.io/issues/1" class="d-block px-2 text-white">前端资源分享（一）</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/hacke2/hacke2.github.io/issues/3" class="d-block px-2 text-white">前端资源分享（二）</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://deerchao.net/tutorials/regex/regex.htm" class="d-block px-2 text-white">正则表达式30分钟入门教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://jinlong.github.io/2013/08/29/devtoolsecrets/" class="d-block px-2 text-white">浏览器开发工具的秘密</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/AlloyTeam/Mars" class="d-block px-2 text-white">移动Web前端知识库</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/hoosin/mobile-web-favorites" class="d-block px-2 text-white">移动前端开发收藏夹</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://works.jinbuguo.com/apache/menu22/index.html" class="d-block px-2 text-white">Apache 中文手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://tengine.taobao.org/book/index.html" class="d-block px-2 text-white">Nginx开发从入门到精通</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.ttlsa.com/nginx/nginx-stu-pdf/" class="d-block px-2 text-white">Nginx教程从入门到精通</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://softwaredownload.gitbooks.io/openwrt-fanqiang/content/" class="d-block px-2 text-white">OpenWrt智能、自动、透明翻墙路由器教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://community.emc.com/docs/DOC-16067" class="d-block px-2 text-white">SAN 管理入门系列</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://sketchcn.com/sketch-chinese-user-manual.html#introduce" class="d-block px-2 text-white">Sketch 中文手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://ifeve.com/perfbook/" class="d-block px-2 text-white">深入理解并行编程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn" class="d-block px-2 text-white">傻瓜函数编程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://dcaoyuan.github.io/papers/pdfs/Scalability.pdf" class="d-block px-2 text-white">走向分布式</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://edu.51cto.com" class="d-block px-2 text-white">51CTO学院</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.codecademy.com/?locale_code=zh" class="d-block px-2 text-white">Codecademy</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.codeschool.com" class="d-block px-2 text-white">CodeSchool</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.coursera.org/courses?orderby=upcoming&lngs=zh" class="d-block px-2 text-white">Coursera</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://learnxinyminutes.com" class="d-block px-2 text-white">Learn X in Y minutes</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.shiyanlou.com" class="d-block px-2 text-white">shiyanlou</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://teamtreehouse.com" class="d-block px-2 text-white">TeamTreeHouse</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.udacity.com" class="d-block px-2 text-white">Udacity</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.xuetangx.com" class="d-block px-2 text-white">xuetangX</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.imooc.com/course/list" class="d-block px-2 text-white">慕课网</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.jikexueyuan.com" class="d-block px-2 text-white">极客学院</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.hubwiz.com" class="d-block px-2 text-white">汇智网</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.jisuanke.com" class="d-block px-2 text-white">计蒜客</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://aiyanbo.gitbooks.io/spark-programming-guide-zh-cn/content/" class="d-block px-2 text-white">Spark 编程指南简体中文版</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://code.csdn.net/CODE_Translation/spark_matei_phd" class="d-block px-2 text-white">大型集群上的快速和通用数据处理架构</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/linyiqun/DataMiningAlgorithm" class="d-block px-2 text-white">数据挖掘中经典的算法实现和详细的注释</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://dataminingguide.books.yourtion.com" class="d-block px-2 text-white">面向程序员的数据挖掘指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://man.chinaunix.net/linux/debian/reference/reference.zh-cn.html" class="d-block px-2 text-white">Debian 参考手册 </a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/yeasy/docker_practice" class="d-block px-2 text-white">Docker —— 从入门到实践</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/widuu/chinese_docker" class="d-block px-2 text-white">Docker中文指南</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://yuedu.baidu.com/ebook/d817967416fc700abb68fca1" class="d-block px-2 text-white">Docker入门实战</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.freebsd.org/doc/zh_CN.UTF-8/books/handbook/" class="d-block px-2 text-white">FreeBSD 使用手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://tinylab.gitbooks.io/linux-doc/content/zh-cn/" class="d-block px-2 text-white">Linux Documentation (中文版)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://happypeter.github.io/LGCB/book/" class="d-block px-2 text-white">Linux Guide for Complete Beginners</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://works.jinbuguo.com/lfs/lfs62/index.html" class="d-block px-2 text-white">Linux 构建指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://sourceforge.net/projects/elpi/" class="d-block px-2 text-white">Linux 系统高级编程</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/me115/linuxtools_rst" class="d-block px-2 text-white">Linux工具快速教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/" class="d-block px-2 text-white">Mac 开发配置手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/" class="d-block px-2 text-white">Operating Systems: Three Easy Pieces</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://billie66.github.io/TLCL/index.html" class="d-block px-2 text-white">The Linux Command Line</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wiki.ubuntu.org.cn/UbuntuManual" class="d-block px-2 text-white">Ubuntu 参考手册 </a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/objectkuan/ucore-docs/details" class="d-block px-2 text-white">uCore Lab: Operating System Course in Tsinghua University</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://cb.vu/unixtoolbox_zh_CN.xhtml" class="d-block px-2 text-white">UNIX TOOLBOX</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md" class="d-block px-2 text-white">命令行的艺术</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://tinylab.gitbooks.io/elinux/content/zh/" class="d-block px-2 text-white">嵌入式 Linux 知识库 (eLinux.org 中文版)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://i.linuxtoy.org/docs/guide/index.html" class="d-block px-2 text-white">开源世界旅行手册</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/tobegit3hub/understand_linux_process" class="d-block px-2 text-white">理解Linux进程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://cn.linux.vbird.org/linux_basic/linux_basic.php" class="d-block px-2 text-white">鸟哥的 Linux 私房菜 基础学习篇</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://cn.linux.vbird.org/linux_server/" class="d-block px-2 text-white">鸟哥的 Linux 私房菜 服务器架设篇</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://redisbook.com" class="d-block px-2 text-white">Redis 设计与实现</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/justinyhuang/the-little-mongodb-book-cn" class="d-block px-2 text-white">The Little MongoDB Book 中文版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/phodal/designiot" class="d-block px-2 text-white">一步步搭建物联网系统</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.runoob.com/regexp/regexp-tutorial.html" class="d-block px-2 text-white">正则表达式-菜鸟教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://web.archive.org/web/20161119141236/http://deerchao.net:80/tutorials/regex/regex.htm" class="d-block px-2 text-white">正则表达式30分钟入门教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://rogerdudler.github.io/git-guide/index.zh.html" class="d-block px-2 text-white">Git - 简易指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/flyhigher139/Git-Cheat-Sheet" class="d-block px-2 text-white">Git-Cheat-Sheet</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://gitbook.liuhui998.com" class="d-block px-2 text-white">Git Community Book 中文版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html" class="d-block px-2 text-white">git-flow 备忘清单</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/" class="d-block px-2 text-white">Git magic</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/" class="d-block px-2 text-white">Git Magic</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://gitref.justjavac.com" class="d-block px-2 text-white">Git 参考手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/github-help" class="d-block px-2 text-white">Github帮助文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://snowdream86.gitbooks.io/github-cheat-sheet/content/zh/" class="d-block px-2 text-white">GitHub秘籍</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" class="d-block px-2 text-white">Git教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/gotgit/gotgithub" class="d-block px-2 text-white">Got GitHub</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.worldhello.net/gotgithub/index.html" class="d-block px-2 text-white">GotGitHub</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://zh-hginit.readthedocs.io/en/latest/" class="d-block px-2 text-white">HgInit (中文版)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.mercurial-scm.org/wiki/ChineseTutorial" class="d-block px-2 text-white">Mercurial 使用教程</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://git-scm.com/book/zh/v2" class="d-block px-2 text-white">Pro Git</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/0532/progit/details" class="d-block px-2 text-white">Pro Git 中文版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://svnbook.red-bean.com/nightly/zh/index.html" class="d-block px-2 text-white">svn 手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://pcottle.github.io/learnGitBranching/" class="d-block px-2 text-white">学习 Git 分支</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://igit.linuxtoy.org/index.html" class="d-block px-2 text-white">沉浸式学 Git</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://backlogtool.com/git-guide/cn/" class="d-block px-2 text-white">猴子都能懂的GIT入门</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.kancloud.cn/kancloud/a-programmer-prepares" class="d-block px-2 text-white">程序员的自我修养</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/fuxiaopang/learnelasticsearch/details" class="d-block px-2 text-white">ElasticSearch 权威指南</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://es.xiaoleilu.com" class="d-block px-2 text-white">Elasticsearch 权威指南（中文版）</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://kibana.logstash.es" class="d-block px-2 text-white">ELKstack 中文指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/chenryn/logstash-best-practice-cn" class="d-block px-2 text-white">Logstash 最佳实践</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://udn.yyuap.com/doc/mastering-elasticsearch/" class="d-block px-2 text-white">Mastering Elasticsearch(中文版)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/wizardforcel/puppet-27-cookbook/details" class="d-block px-2 text-white">Puppet 2.7 Cookbook 中文版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://read.douban.com/ebook/4972883/" class="d-block px-2 text-white">取悦的工序：如何理解游戏</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.oschina.net/translate/what-every-programmer-should-know-about-memory-part1?print" class="d-block px-2 text-white">每个程序员都应该了解的内存知识(译)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/julycoding/The-Art-Of-Programming-by-July" class="d-block px-2 text-white">程序员编程艺术</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.kancloud.cn/kancloud/intro-to-prog/52592" class="d-block px-2 text-white">编程入门指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/DeathKing/Learning-SICP" class="d-block px-2 text-white">《计算机程序的结构和解释》公开课 翻译项目</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://exvim.github.io/docs-zh/intro/" class="d-block px-2 text-white">exvim--vim 改良成IDE项目</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/vimcn/vimcdoc" class="d-block px-2 text-white">Vim中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/yangyangwithgnu/use_vim_as_ide" class="d-block px-2 text-white">所需即所获：像 IDE 一样使用 vim</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://learnvimscriptthehardway.onefloweroneworld.com" class="d-block px-2 text-white">笨方法学Vimscript 中译本</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://learnopengl-cn.github.io" class="d-block px-2 text-white">LearnOpenGL CN</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/zilongshanren/opengl-tutorials" class="d-block px-2 text-white">OpenGL 教程</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://blog.csdn.net/lovelion/article/details/17517213" class="d-block px-2 text-white">史上最全设计模式导学目录</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/me115/design_patterns" class="d-block px-2 text-white">图说设计模式</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/justinyhuang/Functional-Programming-For-The-Rest-of-Us-Cn" class="d-block px-2 text-white">傻瓜函数编程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.infoq.com/cn/minibooks/scrum-xp-from-the-trenches" class="d-block px-2 text-white">硝烟中的 Scrum 和 XP</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://docs.huihoo.com/gnu/linux/gmake.html" class="d-block px-2 text-white">GNU make 指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/Gradle-2-User-Guide" class="d-block px-2 text-white">Gradle 2 用户指南</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://yuedu.baidu.com/ebook/f23af265998fcc22bcd10da2" class="d-block px-2 text-white">Gradle 中文使用文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://web.archive.org/web/20170616013024/http://local.joelonsoftware.com/wiki/Chinese_(Simplified" class="d-block px-2 text-white">Joel谈软件</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/fool2fish/selenium-doc" class="d-block px-2 text-white">selenium 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.ituring.com.cn/book/1143" class="d-block px-2 text-white">开源软件架构</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://article.yeeyan.org/view/2251/94882" class="d-block px-2 text-white">持续集成（第二版）</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://web.archive.org/web/20170615232349/http://local.joelonsoftware.com/wiki/首頁" class="d-block px-2 text-white">約耳談軟體(Joel on Software)</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/ecomfe/spec" class="d-block px-2 text-white">编码规范</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.ibm.com/developerworks/cn/java/j-ap/" class="d-block px-2 text-white">让开发自动化系列专栏</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.ibm.com/developerworks/cn/java/j-cq/" class="d-block px-2 text-white">追求代码质量</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.apkbus.com/design/index.html" class="d-block px-2 text-white">Android Design(中文版)</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/CharonChui/AndroidNote" class="d-block px-2 text-white">Android Note(开发过程中积累的知识点)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://leanote.com/blog/post/561658f938f41126b2000298" class="d-block px-2 text-white">Android6.0新特性详解</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://stormzhang.github.io/android/2014/07/07/learn-android-from-rookie/" class="d-block px-2 text-white">Android学习之路</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/bboyfeiyu/android-tech-frontier" class="d-block px-2 text-white">Android开发技术前线(android-tech-frontier)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://hukai.me/android-training-course-in-chinese/index.html" class="d-block px-2 text-white">Google Android官方培训课程中文版</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wiki.jikexueyuan.com/project/material-design/" class="d-block px-2 text-white">Material Design 中文版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/FX-Max/Point-of-Android" class="d-block px-2 text-white">Point-of-Android</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://awk.readthedocs.org/en/latest/index.html" class="d-block px-2 text-white">awk中文指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/wuzhouhui/awk" class="d-block px-2 text-white">awk程序设计语言</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://c-faq-chn.sourceforge.net/ccfaq/ccfaq.html" class="d-block px-2 text-white">C 语言常见问题集</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://doc.lellansin.com" class="d-block px-2 text-white">C/C++ 学习教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://docs.linuxtone.org/ebooks/C&CPP/c/" class="d-block px-2 text-white">Linux C 编程一站式学习</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/limingth/NCCL" class="d-block px-2 text-white">新概念 C 语言教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://book.douban.com/subject/24827879/" class="d-block px-2 text-white">精通C#(第6版) </a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/hellogcc/100-gcc-tips/blob/master/src/index.md" class="d-block px-2 text-white">100个gcc小技巧</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/hellogcc/100-gdb-tips/blob/master/src/index.md" class="d-block px-2 text-white">100个gdb小技巧</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://tinylab.gitbooks.io/cbook/content/" class="d-block px-2 text-white">C 语言编程透视</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/andycai/cprimer" class="d-block px-2 text-white">C/C++ Primer</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.sunistudio.com/cppfaq/" class="d-block px-2 text-white">C++ FAQ LITE(中文版)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/Mooophy/Cpp-Primer" class="d-block px-2 text-white">C++ Primer 5th Answers</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/wuye9036/CppTemplateTutorial" class="d-block px-2 text-white">C++ Template 进阶指南</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.prglab.com/cms/" class="d-block px-2 text-white">C++ 基础教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/" class="d-block px-2 text-white">C++ 并发编程(基于C++11)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/forhappy/Cplusplus-Concurrency-In-Practice" class="d-block px-2 text-white">C++ 并发编程指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/leeyiw/cgdb-manual-in-chinese" class="d-block px-2 text-white">CGDB中文手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://web.archive.org/web/20170615174144/http://sewm.pku.edu.cn/src/paradise/reference/CMake%20Practice.pdf" class="d-block px-2 text-white">Cmake 实践</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://docs.huihoo.com/gnu/linux/gmake.html" class="d-block px-2 text-white">GNU make 指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-cpp-styleguide/contents/" class="d-block px-2 text-white">Google C++ 风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.kuqin.com/qtdocument/tutorial.html" class="d-block px-2 text-white">QT 教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/anjuke/zguide-cn" class="d-block px-2 text-white">ZMQ 指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.ituring.com.cn/book/1203" class="d-block px-2 text-white">像计算机科学家一样思考（C++版)</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.nowamagic.net/librarys/books/contents/c" class="d-block px-2 text-white">简单易懂的C魔法</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://scc.qibebt.cas.cn/docs/linux/base/%B8%FA%CE%D2%D2%BB%C6%F0%D0%B4Makefile-%B3%C2%F0%A9.pdf" class="d-block px-2 text-white">跟我一起写Makefile(PDF)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://coffee-script.org" class="d-block px-2 text-white">CoffeeScript 中文</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/elrrrrrrr/coffeescript-style-guide/blob/master/README-ZH.md" class="d-block px-2 text-white">CoffeeScript 编程风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://dart.lidian.info/wiki/Language_Tour" class="d-block px-2 text-white">Dart 语言导览</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/looly/elasticsearch-definitive-guide-cn" class="d-block px-2 text-white">Elasticsearch 权威指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://kibana.logstash.es" class="d-block px-2 text-white">ELKstack 中文指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://udn.yyuap.com/doc/mastering-elasticsearch/" class="d-block px-2 text-white">Mastering Elasticsearch(中文版)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/Ljzn/ElixrGettingStartedChinese" class="d-block px-2 text-white">Elixir Getting Started 中文翻译</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://elixirschool.com/cn/" class="d-block px-2 text-white">Elixir 编程语言教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/Ljzn/MetaProgrammingInElixirChinese" class="d-block px-2 text-white">Elixir元编程与DSL 中文翻译</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://mydearxym.gitbooks.io/phoenix-doc-in-chinese/content/" class="d-block px-2 text-white">Phoenix 框架中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/liancheng/cpie-cn" class="d-block px-2 text-white">Erlang 并发编程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://micro.ustc.edu.cn/Fortran/ZJDing/" class="d-block px-2 text-white">Fortran77和90/95编程入门</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/astaxie/build-web-application-with-golang" class="d-block px-2 text-white">Go Web 编程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/Unknwon/the-way-to-go_ZH_CN" class="d-block px-2 text-white">Go 入门指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/golang-china/golangdoc.translations" class="d-block px-2 text-white">Go 官方文档翻译</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://tour.go-zh.org/list" class="d-block px-2 text-white">Go 指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/songleo/the-little-go-book_ZH_CN" class="d-block px-2 text-white">Go 简易教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/Unknwon/go-fundamental-programming" class="d-block px-2 text-white">Go 编程基础</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/rujews/go-in-action-notes" class="d-block px-2 text-white">Go 语言实战笔记</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/polaris1119/The-Golang-Standard-Library-by-Example" class="d-block px-2 text-white">Go 语言标准库</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/chai2010/advanced-go-programming-book" class="d-block px-2 text-white">Go 语言高级编程（Advanced Go Programming）</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/hyper-carrot/go_command_tutorial" class="d-block px-2 text-white">Go命令教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/astaxie/Go-in-Action" class="d-block px-2 text-white">Go实战开发</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/achun/Go-Blog-In-Action" class="d-block px-2 text-white">Go语言博客实践</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://blog.csdn.net/dc_726/article/details/46565241" class="d-block px-2 text-white">Java程序员的Golang入门指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/astaxie/NPWG_zh" class="d-block px-2 text-white">Network programming with Go 中文翻译版本</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://gorevel.cn/docs/manual/index.html" class="d-block px-2 text-white">Revel 框架手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://mikespook.com/learning-go/" class="d-block px-2 text-white">学习Go语言</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://go.ctolib.com/docs/read/magical-go-c-index.html" class="d-block px-2 text-white">神奇的 Go 语言</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.ibm.com/developerworks/cn/java/j-pg/" class="d-block px-2 text-white">实战 Groovy 系列</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://learnyoua.haskell.sg" class="d-block px-2 text-white">Haskell 趣学指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://cnhaskell.com" class="d-block px-2 text-white">Real World Haskell 中文版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/css3-tutorial" class="d-block px-2 text-white">CSS3 Tutorial 《CSS3 教程》</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://css.doyoe.com" class="d-block px-2 text-white">CSS参考手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://yanxyz.github.io/emmet-docs/" class="d-block px-2 text-white">Emmet 文档</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.w3school.com.cn/html5/" class="d-block px-2 text-white">HTML5 教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://codeguide.bootcss.com" class="d-block px-2 text-white">HTML和CSS编码规范</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://sass-guidelin.es/zh/" class="d-block px-2 text-white">Sass Guidelines 中文</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://alloyteam.github.io/CodeGuide/" class="d-block px-2 text-white">前端代码规范</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://zh.learnlayout.com" class="d-block px-2 text-white">学习CSS布局</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/chadluo/CSS-Guidelines/blob/master/README.md" class="d-block px-2 text-white">通用 CSS 笔记、建议与指导</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://nilsun.github.io/apple-watch/" class="d-block px-2 text-white">Apple Watch开发初探</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://zh-google-styleguide.readthedocs.org/en/latest/google-objc-styleguide/" class="d-block px-2 text-white">Google Objective-C Style Guide 中文版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://isux.tencent.com/ios-human-interface-guidelines-ui-design-basics-ios7.html" class="d-block px-2 text-white">iOS7人机界面指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/qinjx/30min_guides/blob/master/ios.md" class="d-block px-2 text-white">iOS开发60分钟入门</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wileam.com/iphone-6-screen-cn/" class="d-block px-2 text-white">iPhone 6 屏幕揭秘</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/jkyin/Subtitle" class="d-block px-2 text-white">网易斯坦福大学公开课：iOS 7应用开发字幕文件</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/activiti-5.x-user-guide" class="d-block px-2 text-white">Activiti 5.x 用户指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/apache-mina-2.x-user-guide" class="d-block px-2 text-white">Apache MINA 2 用户指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/apache-shiro-1.2.x-reference" class="d-block px-2 text-white">Apache Shiro 用户指南</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.hawstein.com/posts/google-java-style.html" class="d-block px-2 text-white">Google Java编程风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/h2-database-doc" class="d-block px-2 text-white">H2 Database 教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/servlet-3.1-specification" class="d-block px-2 text-white">Java Servlet 3.1 规范</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/java-code-conventions" class="d-block px-2 text-white">Java 编码规范</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/Jersey-2.x-User-Guide" class="d-block px-2 text-white">Jersey 2.x 用户指南</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/jsse-reference-guide" class="d-block px-2 text-white">JSSE 参考指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://mybatis.github.io/mybatis-3/zh/index.html" class="d-block px-2 text-white">MyBatis中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/netty-4-user-guide" class="d-block px-2 text-white">Netty 4.x 用户指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/essential-netty-in-action" class="d-block px-2 text-white">Netty 实战(精髓)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/rest-in-action" class="d-block px-2 text-white">REST 实战</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/qibaoguang/Spring-Boot-Reference-Guide" class="d-block px-2 text-white">Spring Boot参考指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/spring-framework-4-reference" class="d-block px-2 text-white">Spring Framework 4.x参考文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/waylau/RestDemo" class="d-block px-2 text-white">用jersey构建REST服务</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/adamlu/javascript-style-guide" class="d-block px-2 text-white">Airbnb JavaScript 规范</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/zensh/AngularjsTutorial_cn" class="d-block px-2 text-white">AngularJS入门教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/mgechev/angularjs-style-guide/blob/master/README-zh-cn.md" class="d-block px-2 text-white">AngularJS最佳实践和风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.waylau.com/build-angularjs-app-with-yeoman-in-windows/" class="d-block px-2 text-white">在Windows环境下用Yeoman构建AngularJS项目</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/xufei/Make-Your-Own-AngularJS/blob/master/01.md" class="d-block px-2 text-white">构建自己的AngularJS</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.css88.com/doc/backbone/" class="d-block px-2 text-white">backbone.js中文文档</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.the5fire.com/backbone-js-tutorials-pdf-download.html" class="d-block px-2 text-white">backbone.js入门教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/the5fire/backbonejs-learning-note" class="d-block px-2 text-white">Backbone.js入门教程第二版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.ituring.com.cn/minibook/950" class="d-block px-2 text-white">Chrome扩展及应用开发</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/geekplux/coffeescript-style-guide" class="d-block px-2 text-white">CoffeeScript 编码风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://d3.decembercafe.org" class="d-block px-2 text-white">Learning D3.JS</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/mbostock/d3/wiki/API--%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C" class="d-block px-2 text-white">官方API文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://blog.csdn.net/zhang__tianxu/article/category/1623437" class="d-block px-2 text-white">张天旭的D3教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.cnblogs.com/winleisure/tag/D3.js/" class="d-block px-2 text-white">楚狂人的D3教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://es6.ruanyifeng.com" class="d-block px-2 text-white">ECMAScript 6 入门</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://extjs-doc-cn.github.io/ext4api/" class="d-block px-2 text-white">Ext4.1.0 中文文档</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://bq69.com/blog/articles/script/868/google-javascript-style-guide.html" class="d-block px-2 text-white">Google JavaScript 代码风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md" class="d-block px-2 text-white">Google JSON 风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/kokdemo/impress.js-tutorial-in-Chinese" class="d-block px-2 text-white">impress.js的中文教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://liubin.github.io/promises-book/" class="d-block px-2 text-white">JavaScript Promise迷你书</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://web.archive.org/web/20170112164945/http://typeof.net/s/jsmech/" class="d-block px-2 text-white">Javascript 原理</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://javascript.ruanyifeng.com" class="d-block px-2 text-white">JavaScript 标准参考教程（alpha）</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/jayli/javascript-patterns" class="d-block px-2 text-white">《JavaScript 模式》</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/justjavac/12-javascript-quirks" class="d-block px-2 text-white">javascript 的 12 个怪癖</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://bonsaiden.github.io/JavaScript-Garden/zh/" class="d-block px-2 text-white">JavaScript 秘密花园</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://icodeit.org/jsccp/" class="d-block px-2 text-white">JavaScript核心概念及实践</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://pij.robinqu.me" class="d-block px-2 text-white">Javascript编程指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://i5ting.github.io/How-to-write-jQuery-plugin/build/jquery.plugin.html" class="d-block px-2 text-white">How to write jQuery plugin</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.nowamagic.net/librarys/books/contents/jquery" class="d-block px-2 text-white">简单易懂的JQuery魔法</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://expressjs.jser.us" class="d-block px-2 text-white">express.js 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://javascript.ruanyifeng.com/nodejs/express.html" class="d-block px-2 text-white">Express框架</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/guo-yu/koa-guide" class="d-block px-2 text-white">koa 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.npmjs.com/package/learnyounode-zh-cn" class="d-block px-2 text-white">Learn You The Node.js For Much Win! (中文版)</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://i5ting.github.io/node-debug-tutorial/" class="d-block px-2 text-white">Node debug 三法三例</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/jollen/nodejs-fullstack-lessons" class="d-block px-2 text-white">Node.js Fullstack《從零到一的進撃》</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/alsotang/node-lessons" class="d-block px-2 text-white">Node.js 包教不包会</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/nodejs-tw/nodejs-wiki-book" class="d-block px-2 text-white">Nodejs Wiki Book</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/0532/nodejs/details" class="d-block px-2 text-white">nodejs中文文档</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.nodebeginner.org/index-zh-cn.html" class="d-block px-2 text-white">Node入门</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://nqdeng.github.io/7-days-nodejs/" class="d-block px-2 text-white">七天学会NodeJS</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/nswbmw/N-blog" class="d-block px-2 text-white">使用 Express + MongoDB 搭建多人博客</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://nodejs.ctolib.com/docs/sfile/jstraining/engineering.html" class="d-block px-2 text-white">JavaScript全栈工程师培训材料</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/theJian/build-a-hn-front-page" class="d-block px-2 text-white">Learn React & Webpack by building the Hacker News front page</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/hateonion/react-bits-CN" class="d-block px-2 text-white">React-Bits 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wiki.jikexueyuan.com/project/react-native/" class="d-block px-2 text-white">React Native 中文文档(含最新Android内容)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/fakefish/react-webpack-cookbook" class="d-block px-2 text-white">React webpack-cookbook</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://discountry.github.io/react/" class="d-block px-2 text-white">React.js 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://fraserxu.me/intro-to-react/" class="d-block px-2 text-white">React.js 入门教程</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://cn.vuejs.org/v2/guide/" class="d-block px-2 text-white">Vue.js中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://css88.com/doc/zeptojs_api" class="d-block px-2 text-white">Zepto.js 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/getify/You-Dont-Know-JS/tree/1ed-zh-CN" class="d-block px-2 text-white">你不知道的Javascript</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://justjavac.com/named-function-expressions-demystified.html" class="d-block px-2 text-white">命名函数表达式探秘</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.oschina.net/translate/learning-javascript-design-patterns" class="d-block px-2 text-white">学用 JavaScript 设计模式</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html" class="d-block px-2 text-white">深入理解JavaScript系列</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.dralpha.com/zh/tech/tech.htm" class="d-block px-2 text-white">LaTeX 笔记</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://ctan.org/pkg/lshort-zh-cn" class="d-block px-2 text-white">一份不太简短的 LaTeX2ε 介绍</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/49951331/graduate-project-102pj/blob/master/docs/latex123.pdf" class="d-block px-2 text-white">大家來學 LaTeX</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://acl.readthedocs.org/en/latest/" class="d-block px-2 text-white">ANSI Common Lisp 中文翻译版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.ituring.com.cn/minibook/862" class="d-block px-2 text-white">Common Lisp 高级编程技术</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.w3cschool.cc/manual/lua53doc/contents.html" class="d-block px-2 text-white">Lua 5.3 参考手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wowubuntu.com/markdown/basic.html" class="d-block px-2 text-white">Markdown 快速入门</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.jianshu.com/p/7bd23251da0a" class="d-block px-2 text-white">Markdown 简明教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wowubuntu.com/markdown/" class="d-block px-2 text-white">Markdown 语法说明</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.jianshu.com/p/q81RER" class="d-block px-2 text-white">献给写作者的 Markdown 新手指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.nodebeginner.org/index-zh-cn.html" class="d-block px-2 text-white">Node 入门</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/0532/nodejs/details" class="d-block px-2 text-white">The NodeJS 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://nqdeng.github.io/7-days-nodejs/" class="d-block px-2 text-white">七天学会NodeJS</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/fayland/chinese-perl-book" class="d-block px-2 text-white">Master Perl Today</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://web.archive.org/web/20150326073235/http://net.pku.edu.cn/~yhf/tutorial/perl/perl.html" class="d-block px-2 text-white">Perl 5 教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.yiibai.com/perl" class="d-block px-2 text-white">Perl 教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://docs.phpcomposer.com" class="d-block px-2 text-white">Composer中文文档</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://d.laravel-china.org/docs/5.4" class="d-block px-2 text-white">Laravel5.4中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.myleftstudio.com" class="d-block px-2 text-white">Phalcon7中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wulijun.github.io/php-the-right-way/" class="d-block px-2 text-white">PHP 之道</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://php.net/manual/zh/" class="d-block px-2 text-white">PHP中文手册</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://psr.phphub.org" class="d-block px-2 text-white">PHP标准规范中文版</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://wusuopu.gitbooks.io/symfony2_tutorial/content" class="d-block px-2 text-white">Symfony2 实例教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.yiichina.com/doc/guide/2.0" class="d-block px-2 text-white">Yii2中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.php-internals.com/book/" class="d-block px-2 text-white">深入理解 PHP 内核</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.yiyibooks.cn/xx/Django_1.11.6/index.html" class="d-block px-2 text-white">Django 1.11.6 中文文档</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-purple">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://djangobook.py3k.cn/2.0/" class="d-block px-2 text-white">Django book 2.0</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://docspy3zh.readthedocs.org/en/latest/" class="d-block px-2 text-white">Python 3 文档(简体中文) 3.2.2 documentation</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://python3-cookbook.readthedocs.io/zh_CN/latest/" class="d-block px-2 text-white">Python Cookbook第三版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.pythondoc.com" class="d-block px-2 text-white">Python 中文学习大本营</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://funhacks.net/explore-python" class="d-block px-2 text-white">Python之旅</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" class="d-block px-2 text-white">Python教程 - 廖雪峰的官方网站</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.ctolib.com/docs/sfile/think-python-2e/0.html" class="d-block px-2 text-white">像计算机科学家一样思考Python</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/jiechic/diveintopython3" class="d-block px-2 text-white">深入 Python 3</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://old.sebug.net/paper/books/LearnPythonTheHardWay/" class="d-block px-2 text-white">笨办法学 Python</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://bop.molun.net" class="d-block px-2 text-white">简明 Python 教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://tutorial.djangogirls.org/zh/" class="d-block px-2 text-white">Django Girls 教程</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://cran.r-project.org/doc/contrib/Liu-FAQ.pdf" class="d-block px-2 text-white">153分钟学会 R</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://cran.r-project.org/doc/contrib/Ding-R-intro_cn.pdf" class="d-block px-2 text-white">R 导论</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://yanping.me/shiny-tutorial/" class="d-block px-2 text-white">用 R 构建 Shiny 应用程序</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://cran.r-project.org/doc/contrib/Xu-Statistics_and_R.pdf" class="d-block px-2 text-white">统计学与 R 读书笔记</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.pythondoc.com/sphinx/rest.html" class="d-block px-2 text-white">reStructuredText 入门</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhCN.md" class="d-block px-2 text-white">Rails 风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://ihower.tw/rails4/" class="d-block px-2 text-white">Ruby on Rails 实战圣经</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://guides.ruby-china.org" class="d-block px-2 text-white">Ruby on Rails 指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/JuanitoFatas/ruby-style-guide/blob/master/README-zhCN.md" class="d-block px-2 text-white">Ruby 风格指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.sinatrarb.com/intro-zh.html" class="d-block px-2 text-white">Sinatra</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://lrthw.github.io" class="d-block px-2 text-white">笨方法学 Ruby</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/KaiserY/rust-book-chinese" class="d-block px-2 text-white">Rust 官方教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/photino/rust-notes" class="d-block px-2 text-white">Rust 语言学习笔记</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/rustcc/RustPrimer" class="d-block px-2 text-white">RustPrimer</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/rustcc/rust-by-example/" class="d-block px-2 text-white">通过例子学习 Rust</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://twitter.github.io/effectivescala/index-cn.html" class="d-block px-2 text-white">Effective Scala</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/windor/beginners-guide-to-scala/details" class="d-block px-2 text-white">Scala 初学者指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://twitter.github.io/scala_school/zh_cn/index.html" class="d-block px-2 text-white">Scala 课堂</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://deathking.github.io/yast-cn/" class="d-block px-2 text-white">Scheme 入门教程</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-deepskyblue">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://cccgchinese.strikingly.com" class="d-block px-2 text-white">创意计算课程指南</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://me.52fhy.com/shell-book/" class="d-block px-2 text-white">shell-book</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wiki.ubuntu.org.cn/Shell%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80" class="d-block px-2 text-white">Shell 编程基础</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://github.com/qinjx/30min_guides/blob/master/shell.md" class="d-block px-2 text-white">Shell 脚本编程30分钟入门</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-orangered">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://billie66.github.io/TLCL/book/" class="d-block px-2 text-white">The Linux Command Line 中文版</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
+                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="https://www.gitbook.com/book/numbbbbb/-the-swift-programming-language-/details" class="d-block px-2 text-white">《The Swift Programming Language》中文版</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://man.chinaunix.net/newsoft/vi/doc/help.html" class="d-block px-2 text-white">Vim Manual(中文版)</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://www.study-area.org/tips/vim/index.html" class="d-block px-2 text-white">大家來學 VIM</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wiki.visual-prolog.com/index.php?title=A_Beginners_Guide_to_Visual_Prolog_in_Chinese" class="d-block px-2 text-white">Visual Prolog 7初学指南</a>
+                                </div>
+                            </div>
+                            <div class="book book-bg-darkcyan">
+                                <div class="book-name text-center my-auto text-nowrap">
+                                    <a href="http://wiki.visual-prolog.com/index.php?title=Visual_Prolog_for_Tyros_in_Chinese" class="d-block px-2 text-white">Visual Prolog 7边练边学</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="/js/jquery-3.3.1.slim.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/all.js"></script>
 </body>
 </html>
