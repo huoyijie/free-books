@@ -18,6 +18,8 @@ public class Box {
     private int maxEachBox = MAX_EACH_BOX[rand % MAX_EACH_BOX.length];
     private static final String[] BOOK_BG_COLOR = {"orangered", "deepskyblue", "purple", "darkcyan"};
     private String bookBgColor = BOOK_BG_COLOR[rand % BOOK_BG_COLOR.length];
+    private static final String[] BOOK_SKEW = {"normal", "normal", "skew"};
+    private String bookSkew = BOOK_SKEW[rand % BOOK_SKEW.length];
 
     @NonNull
     private List<Book> bookList;

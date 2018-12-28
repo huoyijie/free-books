@@ -30,12 +30,20 @@
             padding-top: 10px;
         }
 
+        .books-skew {
+            padding-left: 26px;
+        }
+
         .book {
             width: 40px;
             height: 100%;
             border: 1px #17a2b8 solid;
             writing-mode: vertical-rl;
             margin-right: 1px;
+        }
+
+        .book-skew {
+            transform: rotate(-20deg);
         }
 
         .book-bg-orangered {
@@ -71,9 +79,9 @@
         <div class="row">
             <#list bookShelf.boxList as box>
                 <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
-                    <div class="books w-100 h-100 d-flex flex-row align-items-end">
+                    <div class="books books-${box.bookSkew} w-100 h-100 d-flex flex-row align-items-end">
                         <#list box.bookList as book>
-                            <div class="book book-bg-${box.bookBgColor}">
+                            <div class="book book-bg-${box.bookBgColor} book-${box.bookSkew}">
                                 <div class="book-name text-center my-auto text-nowrap">
                                     <a href="${book.url}" class="d-block px-2 text-white">${book.name}</a>
                                 </div>
