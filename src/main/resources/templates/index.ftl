@@ -132,6 +132,10 @@
             right: 0;
             z-index: 1;
         }
+
+        .footer {
+            height: 56px;
+        }
     </style>
 </head>
 <body>
@@ -144,7 +148,16 @@
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"><i class="fas fa-home mr-1"></i>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/huoyijie/free-books"><i class="fas fa-star mr-1"></i>Star Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/huoyijie/"><i class="fab fa-github mr-1"></i>Github </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://huoyijie.github.io/"><i class="fas fa-blog mr-1"></i>Blog </a>
                 </li>
             </ul>
         </div>
@@ -192,6 +205,12 @@
                     </div>
                 </div>
             </#list>
+        </div>
+    </div>
+    <div class="footer bg-light w-100">
+        <div class="text-center text-muted p-4">
+            @ 2018 huoyijie. 内容来源于<mark><a href="https://github.com/EbookFoundation/free-programming-books">free-programming-books</a></mark><br>
+            <a class="nav-link" href="https://github.com/huoyijie/free-books"><i class="fas fa-star mr-1"></i>Star Project</a>
         </div>
     </div>
 
