@@ -2,8 +2,7 @@ package com.iggy_huo.freebooks.book;
 
 import lombok.*;
 
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by huoyijie on 18/12/28.
@@ -20,6 +19,7 @@ public class Box {
     private String bookBgColor = BOOK_BG_COLOR[rand % BOOK_BG_COLOR.length];
     private static final String[] BOOK_SKEW = {"normal", "skew", "skew"};
     private String bookSkew = BOOK_SKEW[rand % BOOK_SKEW.length];
+    private List<String> anchorBookNameList = new ArrayList<>();
 
     @NonNull
     private List<Book> bookList;
@@ -27,5 +27,10 @@ public class Box {
     public boolean full() {
         assert bookList != null;
         return bookList.size() >= maxEachBox;
+    }
+
+    public Box join(List<Box> boxList) {
+        boxList.add(this);
+        return this;
     }
 }

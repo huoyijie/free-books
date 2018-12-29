@@ -15,19 +15,23 @@ import java.util.List;
 @ToString
 public class BookShelf {
     private List<Box> boxList;
+    private List<String> langDepCategoryList;
+    private List<String> lanIndepCategoryList;
 
     public void addBook(Book book) {
-        if (hasRoom()) {
-            boxList.stream()
-                    .filter(box -> !box.full())
-                    .findFirst()
-                    .get()
-                    .getBookList()
-                    .add(book);
-        } else {
-            Box box = new Box(new ArrayList<>());
-            box.getBookList().add(book);
-            boxList.add(box);
+        Box box = hasRoom() ?
+                boxList.stream()
+                .filter(iBox -> !iBox.full())
+                .findFirst()
+                .get() : new Box(new ArrayList<>()).join(boxList);
+        box.getBookList().add(book);
+
+        if ((book.isLangDep() && !langDepCategoryList.contains(book.getCategory()))
+                || (!book.isLangDep() && !lanIndepCategoryList.contains(book.getCategory()))) {
+            box.getAnchorBookNameList().add(book.getName());
+            boolean added = book.isLangDep() ?
+                    langDepCategoryList.add(book.getCategory()) :
+                    lanIndepCategoryList.add(book.getCategory());
         }
     }
 

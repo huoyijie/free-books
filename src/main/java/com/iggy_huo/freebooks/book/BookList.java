@@ -25,7 +25,7 @@ public class BookList {
     private List<Book> books;
 
     public BookShelf toBookShelf() {
-        BookShelf bookShelf = new BookShelf(new ArrayList<>());
+        BookShelf bookShelf = new BookShelf(new ArrayList<>(), new ArrayList<>(), new ArrayList<>());
         books.forEach(bookShelf::addBook);
         // books.stream().forEach(bookShelf::addBook);
         return bookShelf;

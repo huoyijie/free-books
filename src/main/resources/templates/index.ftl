@@ -9,6 +9,59 @@
     <link rel="stylesheet" href="/css/bootstrap.css"/>
     <link rel="stylesheet" href="/css/all.css"/>
     <style type="text/css">
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner-overlay {
+            background-color: orangered;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            opacity: 0.4;
+        }
+
+        .banner-words {
+            width: 80%;
+            height: 100%;
+            padding: 70px 30px;
+            position: absolute;
+            top: 0;
+        }
+
+        .lang-indep-category-bg {
+            /*background-color: lightskyblue;*/
+            background-image: url("/img/coding.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.05;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+        }
+
+        .lang-dep-category-bg {
+            /*background-color: lightgray;*/
+            background-image: url("/img/language.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.05;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+        }
+
         .shelf {
             border: 5px #9E5D08 solid;
         }
@@ -72,15 +125,64 @@
         .book-name a {
             width: 100%;
         }
+
+        .anchor {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Free Books</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="banner">
+        <img src="/img/books.jpg" class="banner-image" alt="banner image">
+        <div class="banner-overlay"></div>
+        <div class="banner-words h2 text-white text-uppercase"><strong>free, open source</strong> e-books & articles navigation</div>
+    </div>
+    <div class="w-100 row">
+        <div class="lang-indep-category col-12 col-md-6 p-0">
+            <div class="w-100 h-100 p-4">
+                <#list bookShelf.lanIndepCategoryList as category>
+                    <a href="#${category}" class="catalog btn btn-outline-info mb-1">${category}</a>
+                </#list>
+            </div>
+            <div class="lang-indep-category-bg w-100 h-100"></div>
+        </div>
+        <div class="lang-dep-category col-12 col-md-6 p-0">
+            <div class="w-100 h-100 p-4">
+                <#list bookShelf.langDepCategoryList as category>
+                    <a href="#${category}" class="catalog btn btn-outline-info mb-1">${category}</a>
+                </#list>
+            </div>
+            <div class="lang-dep-category-bg w-100 h-100"></div>
+        </div>
+    </div>
     <div class="shelf w-100">
         <div class="row">
             <#list bookShelf.boxList as box>
                 <div class="col col-12 col-sm-6 col-md-4 col-lg-3 bg-light">
                     <div class="books books-${box.bookSkew} w-100 h-100 d-flex flex-row align-items-end">
                         <#list box.bookList as book>
+                            <#list box.anchorBookNameList as anchor>
+                                <#if anchor == book.name>
+                                    <a name="${book.category}" id="anchor-${book.category}" class="anchor h1 font-weight-bold text-warning p-4"></a>
+                                </#if>
+                            </#list>
                             <div class="book book-bg-${box.bookBgColor} book-${box.bookSkew}">
                                 <div class="book-name text-center my-auto text-nowrap">
                                     <a href="${book.url}" class="d-block px-2 text-white">${book.name}</a>
@@ -93,9 +195,29 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//tajs.qq.com/stats?sId=66145128";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
     <script src="/js/jquery-3.3.1.slim.js"></script>
     <script src="/js/popper.js"></script>
     <script src="/js/bootstrap.js"></script>
     <script src="/js/all.js"></script>
+    <script type="text/javascript">
+        (function() {
+            $('.catalog').click(function (e){
+                var category = e.target.innerText;
+                var $anchor = $('#anchor-' + category);
+                $anchor.append(category);
+                setTimeout(function () {
+                    $anchor.text('');
+                }, 3000);
+            });
+        })();
+    </script>
 </body>
 </html>
